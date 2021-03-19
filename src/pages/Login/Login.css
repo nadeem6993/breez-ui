@@ -1,0 +1,55 @@
+.mainContainer {
+  display: flex;
+  background: rgb(238, 244, 245);
+}
+
+.imageSection {
+  background-image: url("../../assets/image1.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.loginSection {
+  min-height: 120vh;
+  margin: 200px 0;
+}
+.formSection {
+  padding: 0 150px;
+}
+.labelText {
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#imageSec {
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(223, 21, 179, 0.7),
+    rgba(8, 74, 197, 0.7) 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(223, 21, 179, 0.7),
+    rgba(8, 74, 197, 0.7) 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    -45deg,
+    from(rgba(223, 21, 179, 0.7)),
+    to(rgba(8, 74, 197, 0.7))
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(223, 21, 179, 0.7),
+    rgba(8, 74, 197, 0.7) 100%
+  );
+  background: linear-gradient(
+    -45deg,
+    rgba(223, 21, 179, 0.7),
+    rgba(8, 74, 197, 0.7) 100%
+  );
+}

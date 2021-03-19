@@ -1,0 +1,11 @@
+.billHeader {
+  background: rgb(38, 38, 109);
+  height: 280px;
+}
+
+.iconplate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}

@@ -1,0 +1,18 @@
+.dashboardSidebar {
+  background-color: white;
+}
+.dashboardMain {
+  background-color: rgb(238, 244, 245);
+}
+
+.sidebarTop {
+  background: rgb(38, 38, 109);
+  min-height: 37vh;
+  justify-content: center;
+  padding-top: 6vh;
+}
+
+.dashboardMainTop {
+  background: rgb(38, 38, 109);
+  min-height: 37vh;
+}
