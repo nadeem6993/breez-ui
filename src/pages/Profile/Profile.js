@@ -1,23 +1,31 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Image,
-  Form,
-  Button,
-  Jumbotron,
-} from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./Profile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
-import {
-  faDatabase,
-  faUser,
-  faChartPie,
-} from "@fortawesome/free-solid-svg-icons";
-import avatar from "../../assets/Profile.png";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Patient from "./Patient";
+
+const NoSelection = () => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "100px 0px",
+      }}
+    >
+      <FontAwesomeIcon
+        icon={faSearch}
+        size="8x"
+        style={{ color: "grey", opacity: "0.3" }}
+      />
+      <p style={{ textAlign: "center", margin: "20px" }}>
+        Got to start somewhere! <br /> Select profile type and search above.
+      </p>
+    </div>
+  );
+};
 
 const Profile = () => {
   const [profile, setProfile] = useState("none");
@@ -46,7 +54,7 @@ const Profile = () => {
             lg="12"
             style={{
               backgroundColor: "rgb(238, 244, 245)",
-              minHeight: "120vh",
+              minHeight: "100vh",
               paddingTop: "30px",
             }}
           >
@@ -55,7 +63,7 @@ const Profile = () => {
                 <Row>
                   <Col lg="7">
                     <Form className="d-flex">
-                      <Col lg="4">
+                      <Col lg="4" style={{ padding: "0px" }}>
                         <Form.Group controlId="formProfileType">
                           <Form.Control
                             required
@@ -63,7 +71,10 @@ const Profile = () => {
                             placeholder="Select Profile Type"
                             as="select"
                             onChange={handleChange}
-                            style={{ height: "45px", borderRadius: "10px" }}
+                            style={{
+                              height: "45px",
+                              borderRadius: "10px",
+                            }}
                           >
                             <option value="none">Select Profile Type</option>
                             <option value="patient">Patient</option>
@@ -110,7 +121,15 @@ const Profile = () => {
             </Row>
             <Row>
               <Col lg="12" style={{ padding: "0px 100px 0px 100px" }}>
-                <Jumbotron>{profile === "patient" && <Patient />}</Jumbotron>
+                <div
+                  style={{
+                    backgroundColor: "white",
+                    border: "none",
+                    borderRadius: "10px",
+                  }}
+                >
+                  {profile === "patient" ? <Patient /> : <NoSelection />}
+                </div>
               </Col>
             </Row>
           </Col>

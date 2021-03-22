@@ -4,32 +4,44 @@ import { Table } from "react-bootstrap";
 const Patient = () => {
   return (
     <div>
-      <Table striped bordered hover>
-        <thead>
+      <Table hover style={{ fontSize: "small" }}>
+        <thead style={{ backgroundColor: "lightgrey" }}>
           <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Profile ID</th>
+            <th>Name</th>
+            <th>Email Address</th>
+            <th colSpan="2">Mobile Phone</th>
+            <th>Assigned</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>P323192</td>
+            <td>Daniel Avina</td>
+            <td>dan.avina@boltdental.com</td>
+            <td colSpan="2">415-577-4654</td>
+            <td>Mary Arredondo</td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>P323192</td>
+            <td>Suranne Cooke</td>
+            <td>dan.avina@boltdental.com</td>
+            <td colSpan="2">415-577-4654</td>
+            <td>Mary Arredondo</td>
           </tr>
           <tr>
-            <td>3</td>
-            <td colSpan="2">Larry the Bird</td>
-            <td>@twitter</td>
+            <td>P323193</td>
+            <td>Daniel Avina</td>
+            <td>dan.avina@boltdental.com</td>
+            <td colSpan="2">415-577-4654</td>
+            <td>Mary Arredondo</td>
+          </tr>
+          <tr>
+            <td>P323194</td>
+            <td>Daniel Avina</td>
+            <td>dan.avina@boltdental.com</td>
+            <td colSpan="2">415-577-4654</td>
+            <td>Mary Arredondo</td>
           </tr>
         </tbody>
       </Table>
