@@ -21,13 +21,9 @@ import avatar from "../../assets/Profile.png";
 const Profile = () => {
   return (
     <div>
-      <Container fluid>
+      <Container fluid style={{ padding: "0px" }}>
         <Row className="profileHeader">
-          <Col lg="1">
-            <h1 className="text-white my-4 pt-3">Breez</h1>
-            <Image className="mt-4" src={avatar} roundedCircle height="70px" />
-          </Col>
-          <Col lg="11" style={{ margin: 0, padding: 0 }}>
+          <Col lg="12" style={{ margin: 0, padding: 0 }}>
             <div
               style={{
                 backgroundColor: "white",
@@ -39,38 +35,8 @@ const Profile = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg="1" className="sidrbarIcons">
-            <div className="p-3">
-              <FontAwesomeIcon
-                icon={faMicrosoft}
-                size="4x"
-                style={{ color: "grey" }}
-              />
-            </div>
-            <div className="p-3">
-              <FontAwesomeIcon
-                icon={faDatabase}
-                size="4x"
-                style={{ color: "grey" }}
-              />
-            </div>
-            <div className="p-3">
-              <FontAwesomeIcon
-                icon={faUser}
-                size="4x"
-                style={{ color: "grey" }}
-              />
-            </div>
-            <div className="p-3">
-              <FontAwesomeIcon
-                icon={faChartPie}
-                size="4x"
-                style={{ color: "grey" }}
-              />
-            </div>
-          </Col>
           <Col
-            lg="11"
+            lg="12"
             style={{
               backgroundColor: "rgb(238, 244, 245)",
               minHeight: "120vh",

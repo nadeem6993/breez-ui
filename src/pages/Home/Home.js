@@ -5,8 +5,7 @@ const Home = () => {
   return (
     <div className="d-flex justify-content-center align-items-center">
       <Button href="/login">Login Page</Button>
-      <Button href="/new-billing-entry">New Billing Entry</Button>
-      <Button href="/profile">Profile</Button>
+      <Button href="/dashboard">Dashboard</Button>
     </div>
   );
 };

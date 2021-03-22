@@ -2,12 +2,13 @@
   background-color: white;
 }
 .dashboardMain {
-  background-color: rgb(238, 244, 245);
+  margin: 0;
+  padding: 0;
 }
 
 .sidebarTop {
   background: rgb(38, 38, 109);
-  min-height: 35vh;
+  min-height: 38vh;
   justify-content: center;
   padding-top: 6vh;
 }

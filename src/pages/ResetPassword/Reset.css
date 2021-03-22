@@ -9,7 +9,7 @@
 
 .imageSection2 {
   background: lightblue;
-  height: 120vh;
+  height: 100vh;
 }
 
 .loginSection2 {
@@ -29,4 +29,16 @@
 .resetButtons {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  .loginSection2 {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .formSection2 {
+    margin-top: 100px;
+    padding: 0px;
+  }
 }
