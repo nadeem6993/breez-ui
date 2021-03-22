@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Row,
@@ -17,8 +17,15 @@ import {
   faChartPie,
 } from "@fortawesome/free-solid-svg-icons";
 import avatar from "../../assets/Profile.png";
+import Patient from "./Patient";
 
 const Profile = () => {
+  const [profile, setProfile] = useState("none");
+
+  const handleChange = (e) => {
+    setProfile(e.target.value);
+  };
+
   return (
     <div>
       <Container fluid style={{ padding: "0px" }}>
@@ -55,14 +62,17 @@ const Profile = () => {
                             name="profileType"
                             placeholder="Select Profile Type"
                             as="select"
+                            onChange={handleChange}
                             style={{ height: "45px", borderRadius: "10px" }}
                           >
-                            <option value="0">Select Profile Type</option>
-                            <option value="1">Patient</option>
-                            <option value="2">Provider</option>
-                            <option value="3">Practice</option>
-                            <option value="4">User</option>
-                            <option value="5">Insurance Company</option>
+                            <option value="none">Select Profile Type</option>
+                            <option value="patient">Patient</option>
+                            <option value="provider">Provider</option>
+                            <option value="practice">Practice</option>
+                            <option value="user">User</option>
+                            <option value="insuranceCompany">
+                              Insurance Company
+                            </option>
                           </Form.Control>
                         </Form.Group>
                       </Col>
@@ -100,7 +110,7 @@ const Profile = () => {
             </Row>
             <Row>
               <Col lg="12" style={{ padding: "0px 100px 0px 100px" }}>
-                <Jumbotron></Jumbotron>
+                <Jumbotron>{profile === "patient" && <Patient />}</Jumbotron>
               </Col>
             </Row>
           </Col>
