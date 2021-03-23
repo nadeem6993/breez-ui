@@ -45,6 +45,33 @@ const Patient = () => {
       email: "Suranne@gmail.com",
       mobilePhone: "415-577-4654",
       assigned: "Mary Arredondo",
+      billingHistory: [
+        {
+          REF: "A000001",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+        {
+          REF: "A000002",
+          status: "Paid",
+          balance: "$478.12",
+        },
+        {
+          REF: "A000003",
+          status: "Outstanding",
+          balance: "$4,023.55",
+        },
+        {
+          REF: "A000004",
+          status: "Paid",
+          balance: "$89.93",
+        },
+        {
+          REF: "A000005",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+      ],
     },
     {
       id: "P323194",
@@ -53,6 +80,33 @@ const Patient = () => {
       email: "Zahara@gmail.com",
       mobilePhone: "415-577-4654",
       assigned: "Kenya Milton",
+      billingHistory: [
+        {
+          REF: "A000001",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+        {
+          REF: "A000002",
+          status: "Paid",
+          balance: "$478.12",
+        },
+        {
+          REF: "A000003",
+          status: "Outstanding",
+          balance: "$4,023.55",
+        },
+        {
+          REF: "A000004",
+          status: "Paid",
+          balance: "$89.93",
+        },
+        {
+          REF: "A000005",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+      ],
     },
     {
       id: "P323195",
@@ -61,6 +115,33 @@ const Patient = () => {
       email: "Ammar@gmail.com",
       mobilePhone: "415-577-4654",
       assigned: "Mary Arredondo",
+      billingHistory: [
+        {
+          ref: "A000001",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+        {
+          REF: "A000002",
+          status: "Paid",
+          balance: "$478.12",
+        },
+        {
+          REF: "A000003",
+          status: "Outstanding",
+          balance: "$4,023.55",
+        },
+        {
+          REF: "A000004",
+          status: "Paid",
+          balance: "$89.93",
+        },
+        {
+          REF: "A000005",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+      ],
     },
     {
       id: "P323196",
@@ -69,6 +150,33 @@ const Patient = () => {
       email: "fredrickdonald@gmail.com",
       mobilePhone: "415-577-4654",
       assigned: "Kenya Milton",
+      billingHistory: [
+        {
+          REF: "A000001",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+        {
+          REF: "A000002",
+          status: "Paid",
+          balance: "$478.12",
+        },
+        {
+          REF: "A000003",
+          status: "Outstanding",
+          balance: "$4,023.55",
+        },
+        {
+          REF: "A000004",
+          status: "Paid",
+          balance: "$89.93",
+        },
+        {
+          REF: "A000005",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+      ],
     },
   ];
 
@@ -248,6 +356,7 @@ const Patient = () => {
                     fontSize: "small",
                     padding: "0px",
                     height: "250px",
+                    overflowY: "auto",
                   }}
                 >
                   <thead>
@@ -266,8 +375,8 @@ const Patient = () => {
                   >
                     {data.map((patient) => {
                       return (
-                        <tr>
-                          <td>{patient.RAF}</td>
+                        <tr key={patient.id}>
+                          <td>{patient.billingHistory["ref"]}</td>
                           <td>{patient.status}</td>
                           <td>{patient.balance}</td>
                         </tr>
