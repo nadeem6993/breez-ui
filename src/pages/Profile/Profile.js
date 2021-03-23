@@ -4,6 +4,11 @@ import "./Profile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Patient from "./Patient";
+import Provider from "./Provider";
+import Practice from "./Practice";
+import User from "./User";
+import insuranceCompany from "./InsuranceCompany";
+import InsuranceCompany from "./InsuranceCompany";
 
 const NoSelection = () => {
   return (
@@ -32,6 +37,25 @@ const Profile = () => {
 
   const handleChange = (e) => {
     setProfile(e.target.value);
+  };
+
+  const handleProfile = () => {
+    switch (profile) {
+      case "none":
+        return <NoSelection />;
+      case "patient":
+        return <Patient />;
+      case "provider":
+        return <Provider />;
+      case "practice":
+        return <Practice />;
+      case "user":
+        return <User />;
+      case "insuranceCompany":
+        return <InsuranceCompany />;
+      default:
+        return <NoSelection />;
+    }
   };
 
   return (
@@ -128,7 +152,7 @@ const Profile = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  {profile === "patient" ? <Patient /> : <NoSelection />}
+                  {handleProfile()}
                 </div>
               </Col>
             </Row>
