@@ -11,10 +11,12 @@
 }
 
 .patientMain {
-  background-color: transparent;
+  background-color: rgb(238, 244, 245);
 }
 
 .patientTable {
   height: 300px;
+  background-color: white;
+  border-radius: 10px;
   overflow-y: auto;
 }

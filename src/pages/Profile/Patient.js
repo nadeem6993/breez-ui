@@ -10,6 +10,33 @@ const Patient = () => {
       email: "dan.avina@boltdental.com",
       mobilePhone: "415-577-4654",
       assigned: "Mary Arredondo",
+      billingHistory: [
+        {
+          REF: "A000001",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+        {
+          REF: "A000002",
+          status: "Paid",
+          balance: "$478.12",
+        },
+        {
+          REF: "A000003",
+          status: "Outstanding",
+          balance: "$4,023.55",
+        },
+        {
+          REF: "A000004",
+          status: "Paid",
+          balance: "$89.93",
+        },
+        {
+          REF: "A000005",
+          status: "Resubmitted",
+          balance: "$322.20",
+        },
+      ],
     },
     {
       id: "P323193",
@@ -50,7 +77,6 @@ const Patient = () => {
   const handlePatient = (patient) => {
     setPatientDetail(patient);
   };
-  console.log(patientDetail);
 
   return (
     <div className="patientMain">
@@ -212,9 +238,74 @@ const Patient = () => {
             )}
           </Col>
           <Col lg="4">
-            <div>
-              <h4 style={{ padding: "30px" }}>Billing history</h4>
-            </div>
+            {patientDetail && (
+              <div>
+                <h4 style={{ padding: "30px 0px 0px 0px" }}>Billing history</h4>
+                <Table
+                  hover
+                  borderless
+                  style={{
+                    fontSize: "small",
+                    padding: "0px",
+                    height: "250px",
+                  }}
+                >
+                  <thead>
+                    <tr>
+                      <td>REF#</td>
+                      <td>status</td>
+                      <td>Balance</td>
+                    </tr>
+                  </thead>
+                  <tbody
+                    style={{
+                      border: "1px solid white",
+                      borderRadius: "10px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    {data.map((patient) => {
+                      return (
+                        <tr>
+                          <td>{patient.RAF}</td>
+                          <td>{patient.status}</td>
+                          <td>{patient.balance}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </Table>
+                <Row style={{ padding: "20px 0px" }}>
+                  <Col>
+                    <Button
+                      size="lg"
+                      className="mt-4 px-5"
+                      variant="outline-primary"
+                      style={{
+                        fontSize: "small",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Edit
+                    </Button>
+                  </Col>
+                  <Col>
+                    <Button
+                      size="lg"
+                      className="mt-4 px-5"
+                      variant="primary"
+                      type="submit"
+                      style={{
+                        fontSize: "small",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Save
+                    </Button>
+                  </Col>
+                </Row>
+              </div>
+            )}
           </Col>
         </Row>
       </div>
