@@ -15,6 +15,7 @@ const StatusForm = () => {
                 <p style={{ color: "red", display: "inline" }}>*</p>
               </Form.Label>
               <Form.Control
+                ref={register}
                 name="claimStatus"
                 type="text"
                 as="select"
@@ -32,6 +33,7 @@ const StatusForm = () => {
                 <p style={{ color: "red", display: "inline" }}>*</p>
               </Form.Label>
               <Form.Control
+                ref={register}
                 as="textarea"
                 rows={6}
                 name="statusNotes"
@@ -50,6 +52,7 @@ const StatusForm = () => {
                 <p style={{ color: "red", display: "inline" }}>*</p>
               </Form.Label>
               <Form.Control
+                ref={register}
                 name="patientFollowupAction"
                 type="text"
                 as="select"
@@ -68,6 +71,7 @@ const StatusForm = () => {
                 <p style={{ color: "red", display: "inline" }}>*</p>
               </Form.Label>
               <Form.Control
+                ref={register}
                 name="followupNotes"
                 as="textarea"
                 rows={6}

@@ -9,3 +9,12 @@
   align-items: center;
   padding: 20px;
 }
+
+.patientMain {
+  background-color: transparent;
+}
+
+.patientTable {
+  height: 300px;
+  overflow-y: auto;
+}

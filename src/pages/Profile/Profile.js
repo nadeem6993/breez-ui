@@ -7,7 +7,6 @@ import Patient from "./Patient";
 import Provider from "./Provider";
 import Practice from "./Practice";
 import User from "./User";
-import insuranceCompany from "./InsuranceCompany";
 import InsuranceCompany from "./InsuranceCompany";
 
 const NoSelection = () => {
