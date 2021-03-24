@@ -314,7 +314,7 @@ const Patient = () => {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Row style={{ padding: "20px" }}>
+                <Row style={{ padding: "0px" }}>
                   <Col>
                     <Button
                       size="lg"

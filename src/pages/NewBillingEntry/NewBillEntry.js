@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import "./NewBillingEntry.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
@@ -8,11 +8,12 @@ import {
   faUser,
   faChartPie,
 } from "@fortawesome/free-solid-svg-icons";
-import avatar from "../../assets/Profile.png";
+import { useForm } from "react-hook-form";
 import PatientInfoForm from "./PatientInfoForm";
 import StatusForm from "./StatusForm";
 
 const NewBillEntry = () => {
+  const { register, errors, handleSubmit } = useForm();
   return (
     <div>
       <Container fluid style={{ padding: "0px" }}>
@@ -28,25 +29,68 @@ const NewBillEntry = () => {
             <h3 className="text-white pt-5">New Bill Entry</h3>
           </Col>
         </Row>
-        <Row>
-          <Col
-            lg="12"
-            style={{
-              backgroundColor: "rgb(238, 244, 245)",
-              minHeight: "120vh",
-              paddingTop: "30px",
-            }}
-          >
-            <Row>
-              <Col lg="7" md="12">
-                <h5>Patient Information</h5>
-                <PatientInfoForm />
-              </Col>
-              <Col lg="5" md="12">
-                <h5>Status</h5>
-                <StatusForm />
-              </Col>
-            </Row>
+        <Row className="newBillForms">
+          <Col lg="12">
+            <Form>
+              <Row>
+                <Col lg="7" md="12">
+                  <h5>Patient Information</h5>
+                  <PatientInfoForm register={register} errors={errors} />
+                  <Button
+                    size="lg"
+                    className="mt-4 px-5"
+                    variant="none"
+                    type="cancel"
+                    style={{
+                      fontSize: "small",
+                      fontWeight: "500",
+                      color: "white",
+                      backgroundColor: "orangered",
+                    }}
+                  >
+                    Cancel
+                  </Button>
+                </Col>
+                <Col lg="5" md="12" className="statusForm">
+                  <h5>Status</h5>
+                  <StatusForm register={register} errors={errors} />
+                  <Row className="mt-2">
+                    <Col>
+                      <Button
+                        size="lg"
+                        className="mt-4"
+                        variant="outline-primary"
+                        type="submit"
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          width: "90%",
+                        }}
+                      >
+                        Save + New Entry
+                      </Button>
+                    </Col>
+                    <Col>
+                      <Button
+                        size="lg"
+                        className="mt-4"
+                        variant="primary"
+                        type="submit"
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          color: "white",
+                          width: "90%",
+                          padding: "",
+                        }}
+                      >
+                        Save
+                      </Button>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Form>
           </Col>
         </Row>
       </Container>

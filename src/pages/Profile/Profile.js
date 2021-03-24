@@ -72,15 +72,8 @@ const Profile = () => {
             <h3 className="text-white pt-5">Profile</h3>
           </Col>
         </Row>
-        <Row>
-          <Col
-            lg="12"
-            style={{
-              backgroundColor: "rgb(238, 244, 245)",
-              minHeight: "100vh",
-              paddingTop: "30px",
-            }}
-          >
+        <Row className="profileMain">
+          <Col lg="12">
             <Row>
               <Col lg="12">
                 <Row>
