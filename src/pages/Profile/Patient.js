@@ -375,15 +375,31 @@ const Patient = () => {
                       backgroundColor: "white",
                     }}
                   >
-                    {data.map((patient) => {
-                      return (
-                        <tr key={patient.id}>
-                          <td>{patient.billingHistory["ref"]}</td>
-                          <td>{patient.status}</td>
-                          <td>{patient.balance}</td>
-                        </tr>
-                      );
-                    })}
+                    <tr>
+                      <td>A000001</td>
+                      <td>Resubmitted</td>
+                      <td>$322.20</td>
+                    </tr>
+                    <tr>
+                      <td>A000002</td>
+                      <td>Paid</td>
+                      <td>$478.12</td>
+                    </tr>
+                    <tr>
+                      <td>A000003</td>
+                      <td>Outstanding</td>
+                      <td>$4,023.55</td>
+                    </tr>
+                    <tr>
+                      <td>A000004</td>
+                      <td>Paid</td>
+                      <td>$89.20</td>
+                    </tr>
+                    <tr>
+                      <td>A000005</td>
+                      <td>Resubmitted</td>
+                      <td>$321.20</td>
+                    </tr>
                   </tbody>
                 </Table>
                 <Row style={{ padding: "20px 0px" }}>
