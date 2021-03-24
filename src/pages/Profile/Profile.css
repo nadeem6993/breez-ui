@@ -3,13 +3,6 @@
   height: 286px;
 }
 
-.sidrbarIcons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
 .patientMain {
   background-color: rgb(238, 244, 245);
 }
@@ -19,4 +12,7 @@
   background-color: white;
   border-radius: 10px;
   overflow-y: auto;
+}
+
+@media screen and (max-width: 480px) {
 }

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Form, Row, Col, Table, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {} from "@fortawesome/free-solid-svg-icons";
 
 const Patient = () => {
   const data = [
@@ -216,7 +218,7 @@ const Patient = () => {
       </div>
       <div>
         <Row>
-          <Col lg="8" style={{ padding: "30px" }}>
+          <Col lg="8" style={{ paddingTop: "30px" }}>
             {patientDetail && (
               <Form>
                 <h5>{`Profile ID #${patientDetail.id}`}</h5>

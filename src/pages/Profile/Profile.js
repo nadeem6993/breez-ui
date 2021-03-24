@@ -82,7 +82,7 @@ const Profile = () => {
             }}
           >
             <Row>
-              <Col lg="12" style={{ padding: "0px 100px 0px 100px" }}>
+              <Col lg="12">
                 <Row>
                   <Col lg="7">
                     <Form className="d-flex">
@@ -143,7 +143,7 @@ const Profile = () => {
               </Col>
             </Row>
             <Row>
-              <Col lg="12" style={{ padding: "0px 100px 0px 100px" }}>
+              <Col lg="12">
                 <div
                   style={{
                     backgroundColor: "white",
