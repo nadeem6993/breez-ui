@@ -5,19 +5,20 @@ import { useForm } from "react-hook-form";
 
 const ResetComp = ({ email }) => {
   return (
-    <div>
-      <p className="text-center" style={{ fontSize: "small" }}>
+    <div style={{ padding: "0px 0px" }}>
+      <p
+        className="text-center"
+        style={{ fontSize: "small", color: "#445978" }}
+      >
         We've sent an email to {email}
-      </p>
-      <p className="text-center" style={{ fontSize: "small" }}>
-        Follow the instructions in the email to reset your password.
+        <br /> Follow the instructions in the email to reset your password.
       </p>
       <a
         className="d-flex justify-content-center"
         variant="light"
         color="success"
         href="/login"
-        style={{ fontSize: "small" }}
+        style={{ fontSize: "small", color: "#3b9ad7" }}
       >
         Return to log in
       </a>
@@ -32,9 +33,12 @@ const ResetForm = ({ setEmail }) => {
     setEmail(data.email);
   };
   return (
-    <Form onSubmit={handleSubmit(submitHandle)}>
+    <Form onSubmit={handleSubmit(submitHandle)} style={{ padding: "0px 20px" }}>
       <Form.Group controlId="formBasicEmail">
-        <Form.Label className="labelText2" style={{ fontSize: "small" }}>
+        <Form.Label
+          className="labelText2"
+          style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+        >
           Email Address
           <p style={{ color: "red", display: "inline" }}>*</p>
         </Form.Label>
@@ -42,7 +46,7 @@ const ResetForm = ({ setEmail }) => {
           ref={register}
           type="email"
           name="email"
-          style={{ height: "45px", borderRadius: "10px" }}
+          style={{ height: "43px", borderRadius: "10px" }}
         />
       </Form.Group>
       <div className="resetButtons">
@@ -50,9 +54,16 @@ const ResetForm = ({ setEmail }) => {
           href="/login"
           size="lg"
           className="mt-4 px-5"
-          variant="outline-primary"
+          variant="outline"
           type="cancel"
-          style={{ fontSize: "medium", width: "45%" }}
+          style={{
+            fontSize: "medium",
+            width: "47%",
+            color: "#3b9ad7",
+            backgroundColor: "white",
+            border: "2px solid #3b9ad7",
+            borderRadius: "10px",
+          }}
         >
           Cancel
         </Button>
@@ -60,7 +71,7 @@ const ResetForm = ({ setEmail }) => {
           size="lg"
           className="mt-4 px-5"
           variant="primary"
-          style={{ fontSize: "medium", width: "45%" }}
+          style={{ fontSize: "medium", width: "47%", borderRadius: "10px" }}
           type="submit"
         >
           Reset
@@ -73,12 +84,20 @@ const ResetForm = ({ setEmail }) => {
 const Reset = () => {
   const [email, setEmail] = useState("");
   return (
-    <div>
+    <>
       <Container fluid>
         <Row className="mainContainer2">
           <Col lg="5" className="loginSection2">
             <div className="formSection2">
-              <h3 className="text-center pb-5">Reset Password</h3>
+              <h3
+                style={{
+                  textAlign: "center",
+                  color: "#445978",
+                  paddingBottom: "30px",
+                }}
+              >
+                Reset Password
+              </h3>
               {email ? (
                 <ResetComp email={email} />
               ) : (
@@ -91,7 +110,7 @@ const Reset = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

@@ -69,7 +69,7 @@ const Profile = () => {
                 padding: "0px",
               }}
             ></div>
-            <h3 className="text-white pt-5">Profile</h3>
+            <h2 className="text-white pt-5 ml-5 mt-5">Profile</h2>
           </Col>
         </Row>
         <Row className="profileMain">
@@ -119,9 +119,11 @@ const Profile = () => {
                     <Button
                       block
                       size="lg"
-                      variant="primary"
+                      variant="none"
                       type="submit"
                       style={{
+                        backgroundColor: "#3b9ad7",
+                        width: "70%",
                         fontSize: "small",
                         fontWeight: "500",
                         color: "white",

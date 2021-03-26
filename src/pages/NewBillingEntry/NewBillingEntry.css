@@ -1,21 +1,23 @@
 .billHeader {
-  background: rgb(38, 38, 109);
+  background: rgb(68, 89, 120);
   height: 286px;
   padding: 0;
 }
 
 .newBillForms {
-  background-color: rgb(238, 244, 245);
+  background-color: rgb(236, 240, 243);
   min-height: 120vh;
   padding-top: 30px;
 }
-.statusForm {
-  padding: 30px 20px 0 20px;
+.patientInfo {
+  padding: 10px 30px 0 0;
 }
-
+.statusForm {
+  padding-right: 50px;
+}
 @media screen and (min-width: 768px) {
   .newBillForms {
-    background-color: rgb(238, 244, 245);
+    background-color: rgb(236, 240, 243);
     min-height: 120vh;
     padding: 30px 100px;
   }

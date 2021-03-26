@@ -26,45 +26,38 @@ const NewBillEntry = () => {
                 padding: "0px",
               }}
             ></div>
-            <h3 className="text-white pt-5">New Bill Entry</h3>
+            <h2 className="text-white pt-5 ml-5 mt-5">New Billing Entry</h2>
           </Col>
         </Row>
         <Row className="newBillForms">
           <Col lg="12">
             <Form>
               <Row>
-                <Col lg="7" md="12">
-                  <h5>Patient Information</h5>
+                <Col lg="7" md="12" className="patientInfo">
                   <PatientInfoForm register={register} errors={errors} />
-                  <Button
-                    size="lg"
-                    className="mt-4 px-5"
-                    variant="none"
-                    type="cancel"
-                    style={{
-                      fontSize: "small",
-                      fontWeight: "500",
-                      color: "white",
-                      backgroundColor: "orangered",
-                    }}
-                  >
-                    Cancel
-                  </Button>
                 </Col>
                 <Col lg="5" md="12" className="statusForm">
-                  <h5>Status</h5>
                   <StatusForm register={register} errors={errors} />
-                  <Row className="mt-2">
+                  <Row
+                    className="mt-2"
+                    style={{
+                      padding: "0px 80px 20px 40px",
+                    }}
+                  >
                     <Col>
                       <Button
                         size="lg"
                         className="mt-4"
-                        variant="outline-primary"
                         type="submit"
                         style={{
+                          backgroundColor: "white",
                           fontSize: "small",
                           fontWeight: "500",
-                          width: "90%",
+                          width: "100%",
+                          height: "43px",
+                          color: "#3b9ad7",
+                          border: "2px solid #3b9ad7",
+                          borderRadius: "10px",
                         }}
                       >
                         Save + New Entry
@@ -74,14 +67,15 @@ const NewBillEntry = () => {
                       <Button
                         size="lg"
                         className="mt-4"
-                        variant="primary"
                         type="submit"
                         style={{
                           fontSize: "small",
                           fontWeight: "500",
                           color: "white",
-                          width: "90%",
-                          padding: "",
+                          backgroundColor: "#3b9ad7",
+                          width: "100%",
+                          height: "43px",
+                          borderRadius: "10px",
                         }}
                       >
                         Save

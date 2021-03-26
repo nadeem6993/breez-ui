@@ -1,10 +1,11 @@
 .profileHeader {
-  background: rgb(38, 38, 109);
+  background: rgb(68, 89, 120);
   height: 286px;
 }
 
 .patientMain {
   background-color: rgb(238, 244, 245);
+  padding-right: 30px;
 }
 
 .patientTable {

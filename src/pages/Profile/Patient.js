@@ -191,7 +191,10 @@ const Patient = () => {
   return (
     <div className="patientMain">
       <div className="patientTable">
-        <Table hover style={{ fontSize: "small" }}>
+        <Table
+          hover
+          style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+        >
           <thead style={{ backgroundColor: "lightgrey" }}>
             <tr>
               <th>Profile ID</th>
@@ -217,15 +220,23 @@ const Patient = () => {
         </Table>
       </div>
       <div>
-        <Row>
-          <Col lg="8" style={{ paddingTop: "30px" }}>
+        <Row style={{ paddingTop: "50px" }}>
+          <Col lg="8">
             {patientDetail && (
               <Form>
-                <h5>{`Profile ID #${patientDetail.id}`}</h5>
+                <h5
+                  style={{ color: "#445978" }}
+                >{`Profile ID #${patientDetail.id}`}</h5>
                 <Row>
-                  <Col lg="6" md="6">
+                  <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
                     <Form.Group controlId="formFirstName">
-                      <Form.Label style={{ fontSize: "small" }}>
+                      <Form.Label
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          color: "#445978",
+                        }}
+                      >
                         First Name
                         <p style={{ color: "red", display: "inline" }}>*</p>
                       </Form.Label>
@@ -238,9 +249,15 @@ const Patient = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col lg="6" md="6">
+                  <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
                     <Form.Group controlId="formLastName">
-                      <Form.Label style={{ fontSize: "small" }}>
+                      <Form.Label
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          color: "#445978",
+                        }}
+                      >
                         Last Name
                         <p style={{ color: "red", display: "inline" }}>*</p>
                       </Form.Label>
@@ -255,9 +272,15 @@ const Patient = () => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col lg="6" md="6">
+                  <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
                     <Form.Group controlId="formEmail">
-                      <Form.Label style={{ fontSize: "small" }}>
+                      <Form.Label
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          color: "#445978",
+                        }}
+                      >
                         Email Address
                       </Form.Label>
                       <Form.Control
@@ -268,9 +291,15 @@ const Patient = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col lg="6" md="6">
+                  <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
                     <Form.Group controlId="formMobilePhone">
-                      <Form.Label style={{ fontSize: "small" }}>
+                      <Form.Label
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          color: "#445978",
+                        }}
+                      >
                         Mobile Phone
                         <p style={{ color: "red", display: "inline" }}>*</p>
                       </Form.Label>
@@ -285,9 +314,15 @@ const Patient = () => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col lg="6" md="6">
+                  <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
                     <Form.Group controlId="formProfileType">
-                      <Form.Label style={{ fontSize: "small" }}>
+                      <Form.Label
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          color: "#445978",
+                        }}
+                      >
                         Profile Type
                       </Form.Label>
                       <Form.Control
@@ -299,9 +334,15 @@ const Patient = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col lg="6" md="6">
+                  <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
                     <Form.Group controlId="formAssigned">
-                      <Form.Label style={{ fontSize: "small" }}>
+                      <Form.Label
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          color: "#445978",
+                        }}
+                      >
                         Assigned
                       </Form.Label>
                       <Form.Control
@@ -315,29 +356,37 @@ const Patient = () => {
                   </Col>
                 </Row>
                 <Row style={{ padding: "0px" }}>
-                  <Col>
+                  <Col lg="3">
                     <Button
                       size="lg"
-                      className="mt-4 px-5"
-                      variant="danger"
+                      className="mt-4"
+                      variant="none"
                       style={{
                         fontSize: "small",
                         fontWeight: "500",
                         color: "white",
+                        height: "45px",
+                        width: "100%",
+                        backgroundColor: "#ed1e32",
+                        borderRadius: "10px",
                       }}
                     >
                       Delete
                     </Button>
                   </Col>
-                  <Col>
+                  <Col lg="3">
                     <Button
                       size="lg"
-                      className="mt-4 px-5"
+                      className="mt-4"
                       variant="outline-danger"
                       type="submit"
                       style={{
                         fontSize: "small",
                         fontWeight: "500",
+                        width: "100%",
+                        height: "45px",
+                        border: "2px solid #ed1e32",
+                        borderRadius: "10px",
                       }}
                     >
                       Merge Record
@@ -350,12 +399,19 @@ const Patient = () => {
           <Col lg="4">
             {patientDetail && (
               <div>
-                <h4 style={{ padding: "30px 0px 0px 0px" }}>Billing history</h4>
+                <h4
+                  style={{
+                    color: "#445978",
+                  }}
+                >
+                  Billing history
+                </h4>
                 <Table
                   hover
                   borderless
                   style={{
                     fontSize: "small",
+                    color: "#445978",
                     padding: "0px",
                     height: "250px",
                     overflowY: "auto",
@@ -407,10 +463,15 @@ const Patient = () => {
                     <Button
                       size="lg"
                       className="mt-4 px-5"
-                      variant="outline-primary"
                       style={{
+                        border: "2px solid #3b9ad7",
+                        backgroundColor: "white",
+                        color: "#3b9ad7",
+                        height: "43px",
+                        width: "100%",
                         fontSize: "small",
                         fontWeight: "500",
+                        borderRadius: "10px",
                       }}
                     >
                       Edit
@@ -423,6 +484,10 @@ const Patient = () => {
                       variant="primary"
                       type="submit"
                       style={{
+                        backgroundColor: "#3b9ad7",
+                        borderRadius: "10px",
+                        height: "43px",
+                        width: "100%",
                         fontSize: "small",
                         fontWeight: "500",
                       }}

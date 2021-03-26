@@ -1,6 +1,7 @@
 .mainContainer2 {
   display: flex;
   background: rgb(238, 244, 245);
+  height: 100vh;
 }
 
 .titleStyle2 {
@@ -13,11 +14,11 @@
 }
 
 .loginSection2 {
-  height: 100vh;
   margin: 200px 0;
   padding: 0 70px;
 }
 .formSection2 {
+  margin-top: 100px;
   padding: 0 120px;
 }
 

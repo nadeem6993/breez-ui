@@ -4,30 +4,60 @@ import { faGoogle, faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import "./Login.css";
 import image from "../../assets/image1.jpg";
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router";
 
 const Login = () => {
+  const { register, handleSubmit } = useForm();
+
+  const history = useHistory();
+
+  const loginSubmit = () => {
+    history.push("/dashboard");
+  };
   return (
     <div>
       <Container fluid>
         <Row className="mainContainer">
           <Col lg="5" className="loginSection">
             <div className="formSection">
-              <h3 className="text-center pb-5">Breez Log In</h3>
-              <Form>
+              <h3
+                style={{
+                  textAlign: "center",
+                  color: "#445978",
+                  paddingBottom: "50px",
+                }}
+              >
+                Breez Log In
+              </h3>
+              <Form onSubmit={handleSubmit(loginSubmit)}>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label style={{ fontSize: "small" }}>
+                  <Form.Label
+                    style={{
+                      fontSize: "small",
+                      fontWeight: "500",
+                      color: "#445978",
+                    }}
+                  >
                     Email Address
                     <p style={{ color: "red", display: "inline" }}>*</p>
                   </Form.Label>
                   <Form.Control
+                    name="email"
                     type="email"
+                    required
+                    ref={register}
                     style={{ height: "45px", borderRadius: "10px" }}
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
                   <Form.Label
                     className="labelText"
-                    style={{ fontSize: "small" }}
+                    style={{
+                      fontSize: "small",
+                      fontWeight: "500",
+                      color: "#445978",
+                    }}
                   >
                     <p>
                       Password
@@ -36,6 +66,9 @@ const Login = () => {
                     <a href="/reset">Forgot Password?</a>
                   </Form.Label>
                   <Form.Control
+                    name="password"
+                    ref={register}
+                    required
                     type="password"
                     style={{ height: "45px", borderRadius: "10px" }}
                   />
@@ -44,8 +77,11 @@ const Login = () => {
                   block
                   size="lg"
                   className="mt-4 "
-                  variant="info"
-                  style={{ fontSize: "medium" }}
+                  style={{
+                    fontSize: "small",
+                    padding: "10px",
+                    backgroundColor: "#3b9ad7",
+                  }}
                   type="submit"
                 >
                   Log In
@@ -53,7 +89,16 @@ const Login = () => {
               </Form>
               <div className="pt-4 d-flex">
                 <hr style={{ width: "45%" }} />
-                <p className="px-3">OR</p>
+                <p
+                  style={{
+                    color: "#445978",
+                    fontSize: "small",
+                    padding: "5px",
+                    fontWeight: "500",
+                  }}
+                >
+                  OR
+                </p>
                 <hr style={{ width: "45%" }} />
               </div>
               <Button
@@ -61,7 +106,7 @@ const Login = () => {
                 size="lg"
                 className="mt-4"
                 variant="primary"
-                style={{ fontSize: "medium" }}
+                style={{ fontSize: "small", padding: "10px" }}
                 type="submit"
               >
                 <FontAwesomeIcon icon={faMicrosoft} size="lg" /> Log In with
@@ -72,7 +117,7 @@ const Login = () => {
                 size="lg"
                 className="mt-4"
                 variant="light"
-                style={{ fontSize: "medium" }}
+                style={{ fontSize: "small", padding: "10px", color: "#445978" }}
                 type="submit"
               >
                 <FontAwesomeIcon icon={faGoogle} size="lg" /> Log In with Google

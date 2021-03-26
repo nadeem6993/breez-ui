@@ -11,8 +11,12 @@ import {
 import avatar from "../../assets/Profile.png";
 import NewBillEntry from "../NewBillingEntry/NewBillEntry";
 import Profile from "../Profile/Profile";
+import ClaimHistory from "../NewBillingEntry/ClaimHistory";
 
 const Dashboard = () => {
+  const blue = {
+    color: "lightblue",
+  };
   return (
     <Container fluid>
       <Tab.Container id="tabs-nav" defaultActiveKey="billingEntry">
@@ -20,51 +24,51 @@ const Dashboard = () => {
           <Col lg="1" className="dashboardSidebar">
             <Row className="sidebarTop">
               <Col>
-                <h1 style={{ color: "white" }}>Breez</h1>
+                <h2 style={{ color: "white" }}>Breez</h2>
                 <Image
-                  className="mt-5"
+                  className="avatarStyle"
                   src={avatar}
                   roundedCircle
-                  height="70px"
+                  height="60px"
                 />
               </Col>
             </Row>
             <Row>
               <Col className="iconPlate">
-                <Nav.Item>
+                <Nav.Item className="iconStyle">
                   <Nav.Link eventKey="main">
                     <FontAwesomeIcon
                       icon={faMicrosoft}
-                      size="4x"
-                      style={{ color: "grey" }}
+                      size="2x"
+                      style={{ color: "lightgrey" }}
                     />
                   </Nav.Link>
                 </Nav.Item>
 
-                <Nav.Item>
+                <Nav.Item className="iconStyle">
                   <Nav.Link eventKey="billingEntry">
                     <FontAwesomeIcon
                       icon={faDatabase}
-                      size="4x"
-                      style={{ color: "grey" }}
+                      size="2x"
+                      style={{ color: "lightgrey" }}
                     />
                   </Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
+                <Nav.Item className="iconStyle">
                   <Nav.Link eventKey="profile">
                     <FontAwesomeIcon
                       icon={faUser}
-                      size="4x"
-                      style={{ color: "grey" }}
+                      size="2x"
+                      style={{ color: "lightgrey" }}
                     />
                   </Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
+                <Nav.Item className="iconStyle">
                   <Nav.Link eventKey="chart">
                     <FontAwesomeIcon
                       icon={faChartPie}
-                      size="4x"
-                      style={{ color: "grey" }}
+                      size="2x"
+                      style={{ color: "lightgrey" }}
                     />
                   </Nav.Link>
                 </Nav.Item>
@@ -78,6 +82,9 @@ const Dashboard = () => {
               </Tab.Pane>
               <Tab.Pane eventKey="profile">
                 <Profile />
+              </Tab.Pane>
+              <Tab.Pane eventKey="chart">
+                <ClaimHistory />
               </Tab.Pane>
             </Tab.Content>
           </Col>

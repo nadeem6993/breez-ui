@@ -1,23 +1,20 @@
 .mainContainer {
   display: flex;
   background: rgb(238, 244, 245);
+  height: 100vh;
 }
 
 .imageSection {
-  background-image: url("../../assets/image1.jpg");
+  background: lightblue;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 
 .loginSection {
-  height: 100vh;
   margin: 200px 0;
 }
 
 .formSection {
-  padding: 0 150px;
+  padding: 0 140px;
 }
 .labelText {
   margin-top: 10px;

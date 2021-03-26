@@ -3,11 +3,20 @@ import { Col, Form, Row, Button } from "react-bootstrap";
 
 const StatusForm = ({ register, errors }) => {
   return (
-    <div>
+    <div
+      style={{
+        padding: "10px 80px 20px 40px",
+      }}
+    >
+      <h5 style={{ marginTop: "20px", marginBottom: "20px", color: "#445978" }}>
+        Status
+      </h5>
       <Row>
         <Col>
           <Form.Group controlId="formClaimStatus">
-            <Form.Label style={{ fontSize: "small" }}>
+            <Form.Label
+              style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+            >
               Claim Status
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -17,7 +26,7 @@ const StatusForm = ({ register, errors }) => {
               type="text"
               as="select"
               required
-              style={{ height: "45px", borderRadius: "10px" }}
+              style={{ height: "45px", borderRadius: "8px" }}
             >
               <option value="none">Claim your status</option>
               <option value="paid">Paid</option>
@@ -30,7 +39,9 @@ const StatusForm = ({ register, errors }) => {
       <Row>
         <Col>
           <Form.Group controlId="formStatusNotes">
-            <Form.Label style={{ fontSize: "small" }}>
+            <Form.Label
+              style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+            >
               Notes
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -40,16 +51,20 @@ const StatusForm = ({ register, errors }) => {
               rows={6}
               name="statusNotes"
               required
-              style={{ borderRadius: "10px" }}
+              style={{ borderRadius: "8px" }}
             />
           </Form.Group>
         </Col>
       </Row>
-      <h5>Follow-Up Actions</h5>
+      <h5 style={{ marginTop: "43px", marginBottom: "20px", color: "#445978" }}>
+        Follow-Up Actions
+      </h5>
       <Row>
         <Col>
           <Form.Group controlId="patientFollowupAction">
-            <Form.Label style={{ fontSize: "small" }}>
+            <Form.Label
+              style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+            >
               Patient Follow-Up Action
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -60,7 +75,7 @@ const StatusForm = ({ register, errors }) => {
               as="select"
               placeholder="Choose Follow-Up"
               required
-              style={{ height: "45px", borderRadius: "10px" }}
+              style={{ height: "45px", borderRadius: "8px" }}
             >
               <option value="none">Choose Follow-Up</option>
               <option value="email">Email</option>
@@ -75,7 +90,9 @@ const StatusForm = ({ register, errors }) => {
       <Row>
         <Col>
           <Form.Group controlId="formFollowupNotes">
-            <Form.Label style={{ fontSize: "small" }}>
+            <Form.Label
+              style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+            >
               Notes
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -85,7 +102,7 @@ const StatusForm = ({ register, errors }) => {
               as="textarea"
               rows={6}
               required
-              style={{ borderRadius: "10px" }}
+              style={{ borderRadius: "8px" }}
             />
           </Form.Group>
         </Col>

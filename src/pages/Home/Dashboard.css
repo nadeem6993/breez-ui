@@ -7,14 +7,14 @@
 }
 
 .sidebarTop {
-  background: rgb(38, 38, 109);
-  min-height: 38vh;
+  background: rgb(68, 89, 120);
+  min-height: 286px;
   justify-content: center;
-  padding-top: 6vh;
+  padding-top: 50px;
 }
 
 .dashboardMainTop {
-  background: rgb(38, 38, 109);
+  background: rgb(68, 89, 120);
   min-height: 35vh;
 }
 
@@ -22,12 +22,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px;
+}
+.iconStyle {
+  padding: 20px 0;
+}
+.avatarStyle {
+  margin-top: 80px;
+  margin-left: 20px;
 }
 @media screen and (max-width: 1000px) {
   .iconPlate {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+  .iconStyle {
+    padding: 0 10px;
   }
 }
