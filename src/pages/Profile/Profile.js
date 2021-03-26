@@ -117,13 +117,12 @@ const Profile = () => {
                   </Col>
                   <Col lg="5">
                     <Button
-                      block
                       size="lg"
                       variant="none"
                       type="submit"
+                      className="addBtn"
                       style={{
                         backgroundColor: "#3b9ad7",
-                        width: "70%",
                         fontSize: "small",
                         fontWeight: "500",
                         color: "white",

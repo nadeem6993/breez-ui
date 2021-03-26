@@ -26,7 +26,12 @@ const NewBillEntry = () => {
                 padding: "0px",
               }}
             ></div>
-            <h2 className="text-white pt-5 ml-5 mt-5">New Billing Entry</h2>
+            <h2
+              className="text-white pt-5 ml-5 mt-5"
+              style={{ fontWeight: "500" }}
+            >
+              New Billing Entry
+            </h2>
           </Col>
         </Row>
         <Row className="newBillForms">
@@ -35,6 +40,25 @@ const NewBillEntry = () => {
               <Row>
                 <Col lg="7" md="12" className="patientInfo">
                   <PatientInfoForm register={register} errors={errors} />
+                  <Row>
+                    <Col>
+                      <Button
+                        size="lg"
+                        className="mt-4 px-5"
+                        variant="none"
+                        style={{
+                          fontSize: "small",
+                          fontWeight: "500",
+                          color: "white",
+                          backgroundColor: "orangered",
+                          height: "43px",
+                          borderRadius: "10px",
+                        }}
+                      >
+                        Cancel
+                      </Button>
+                    </Col>
+                  </Row>
                 </Col>
                 <Col lg="5" md="12" className="statusForm">
                   <StatusForm register={register} errors={errors} />

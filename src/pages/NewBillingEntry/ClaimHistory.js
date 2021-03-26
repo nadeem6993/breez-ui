@@ -70,7 +70,7 @@ const ClaimHistory = () => {
                 padding: "0px",
               }}
             ></div>
-            <h3 className="text-white pt-5">#REF A000001</h3>
+            <h3 className="text-white pt-5 ml-5 mt-5">#REF A000001</h3>
           </Col>
         </Row>
         <Row className="newBillForms">
@@ -104,48 +104,55 @@ const ClaimHistory = () => {
                       </Table>
                     </Col>
                   </Row>
-                  <h5>Patient Information</h5>
                   <PatientInfoForm
                     register={register}
                     errors={errors}
                     disable={disable}
                   />
-                  <Row>
-                    <Col>
-                      <Button
-                        onClick={handleDisable}
-                        size="lg"
-                        className="mt-4 px-5"
-                        variant="outline-primary"
-                        style={{
-                          fontSize: "small",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Edit
-                      </Button>
-                    </Col>
-                    <Col>
-                      <Button
-                        size="lg"
-                        className="mt-4 px-5"
-                        variant="primary"
-                        type="submit"
-                        style={{
-                          fontSize: "small",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Save
-                      </Button>
-                    </Col>
+                  <Row
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      padding: "0px 30px 0px 20px",
+                    }}
+                  >
+                    <Button
+                      onClick={handleDisable}
+                      size="lg"
+                      style={{
+                        fontSize: "small",
+                        fontWeight: "500",
+                        backgroundColor: "white",
+                        color: "#3b9ad7",
+                        width: "25%",
+                        border: "2px solid #3b9ad7",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      Edit
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="none"
+                      type="submit"
+                      style={{
+                        fontSize: "small",
+                        fontWeight: "500",
+                        color: "white",
+                        width: "25%",
+                        height: "43px",
+                        backgroundColor: "#3b9ad7",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      Save
+                    </Button>
                   </Row>
                 </Col>
                 <Col lg="5" md="12" className="statusForm">
-                  <h5>Status</h5>
                   <StatusForm register={register} errors={errors} />
                   <Row className="mt-2">
-                    <Col>
+                    <Col style={{ padding: "0px 50px" }}>
                       <Button
                         block
                         size="lg"
@@ -155,6 +162,9 @@ const ClaimHistory = () => {
                         style={{
                           fontSize: "small",
                           fontWeight: "500",
+                          height: "43px",
+                          backgroundColor: "#3b9ad7",
+                          borderRadius: "10px",
                         }}
                       >
                         Add Action

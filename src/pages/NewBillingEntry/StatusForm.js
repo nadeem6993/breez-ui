@@ -8,14 +8,21 @@ const StatusForm = ({ register, errors }) => {
         padding: "10px 80px 20px 40px",
       }}
     >
-      <h5 style={{ marginTop: "20px", marginBottom: "20px", color: "#445978" }}>
+      <h5
+        style={{
+          marginTop: "20px",
+          marginBottom: "20px",
+          fontWeight: "600",
+          color: "#445978",
+        }}
+      >
         Status
       </h5>
       <Row>
         <Col>
           <Form.Group controlId="formClaimStatus">
             <Form.Label
-              style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
             >
               Claim Status
               <p style={{ color: "red", display: "inline" }}>*</p>
@@ -40,7 +47,7 @@ const StatusForm = ({ register, errors }) => {
         <Col>
           <Form.Group controlId="formStatusNotes">
             <Form.Label
-              style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
             >
               Notes
               <p style={{ color: "red", display: "inline" }}>*</p>
@@ -56,14 +63,21 @@ const StatusForm = ({ register, errors }) => {
           </Form.Group>
         </Col>
       </Row>
-      <h5 style={{ marginTop: "43px", marginBottom: "20px", color: "#445978" }}>
+      <h5
+        style={{
+          marginTop: "43px",
+          marginBottom: "20px",
+          fontWeight: "600",
+          color: "#445978",
+        }}
+      >
         Follow-Up Actions
       </h5>
       <Row>
         <Col>
           <Form.Group controlId="patientFollowupAction">
             <Form.Label
-              style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
             >
               Patient Follow-Up Action
               <p style={{ color: "red", display: "inline" }}>*</p>
@@ -91,7 +105,7 @@ const StatusForm = ({ register, errors }) => {
         <Col>
           <Form.Group controlId="formFollowupNotes">
             <Form.Label
-              style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
+              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
             >
               Notes
               <p style={{ color: "red", display: "inline" }}>*</p>

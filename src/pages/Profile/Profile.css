@@ -3,9 +3,13 @@
   height: 286px;
 }
 
+.profileMain {
+  background-color: rgb(238, 244, 245);
+  min-height: 100vh;
+  padding: 30px 200px 20px 100px;
+}
 .patientMain {
   background-color: rgb(238, 244, 245);
-  padding-right: 30px;
 }
 
 .patientTable {
@@ -14,16 +18,37 @@
   border-radius: 10px;
   overflow-y: auto;
 }
-.profileMain {
-  background-color: rgb(238, 244, 245);
-  min-height: 100vh;
-  padding: 30px 20px 0 20px;
-}
 
-@media screen and (min-width: 768px) {
+.addBtn {
+  width: 70%;
+}
+@media screen and (max-width: 768px) {
   .profileMain {
     background-color: rgb(238, 244, 245);
     min-height: 100vh;
-    padding: 30px 100px;
+    padding: 30px 10px;
+  }
+  .patientMain {
+    background-color: rgb(238, 244, 245);
+    padding-right: 10px;
+  }
+  .addBtn {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .profileMain {
+    background-color: rgb(238, 244, 245);
+    min-height: 100vh;
+    padding: 30px 10px;
+  }
+  .patientMain {
+    background-color: rgb(238, 244, 245);
+    padding-right: 10px;
+  }
+  .addBtn {
+    width: 97%;
+    margin-bottom: 20px;
   }
 }

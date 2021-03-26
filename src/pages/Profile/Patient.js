@@ -225,7 +225,7 @@ const Patient = () => {
             {patientDetail && (
               <Form>
                 <h5
-                  style={{ color: "#445978" }}
+                  style={{ color: "#445978", fontWeight: "600" }}
                 >{`Profile ID #${patientDetail.id}`}</h5>
                 <Row>
                   <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
@@ -253,7 +253,7 @@ const Patient = () => {
                     <Form.Group controlId="formLastName">
                       <Form.Label
                         style={{
-                          fontSize: "small",
+                          fontSize: "12px",
                           fontWeight: "500",
                           color: "#445978",
                         }}
@@ -276,7 +276,7 @@ const Patient = () => {
                     <Form.Group controlId="formEmail">
                       <Form.Label
                         style={{
-                          fontSize: "small",
+                          fontSize: "12px",
                           fontWeight: "500",
                           color: "#445978",
                         }}
@@ -295,7 +295,7 @@ const Patient = () => {
                     <Form.Group controlId="formMobilePhone">
                       <Form.Label
                         style={{
-                          fontSize: "small",
+                          fontSize: "12px",
                           fontWeight: "500",
                           color: "#445978",
                         }}
@@ -318,7 +318,7 @@ const Patient = () => {
                     <Form.Group controlId="formProfileType">
                       <Form.Label
                         style={{
-                          fontSize: "small",
+                          fontSize: "12px",
                           fontWeight: "500",
                           color: "#445978",
                         }}
@@ -338,7 +338,7 @@ const Patient = () => {
                     <Form.Group controlId="formAssigned">
                       <Form.Label
                         style={{
-                          fontSize: "small",
+                          fontSize: "12px",
                           fontWeight: "500",
                           color: "#445978",
                         }}
@@ -377,7 +377,7 @@ const Patient = () => {
                   <Col lg="3">
                     <Button
                       size="lg"
-                      className="mt-4"
+                      className="my-4"
                       variant="outline-danger"
                       type="submit"
                       style={{
