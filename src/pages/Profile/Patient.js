@@ -225,7 +225,7 @@ const Patient = () => {
                   style={{ color: "#445978" }}
                 >{`Profile ID #${patientDetail.id}`}</h5>
                 <Row>
-                  <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
+                  <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
                     <Form.Group controlId="formFirstName">
                       <Form.Label
                         style={{
@@ -251,7 +251,7 @@ const Patient = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
+                  <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
                     <Form.Group controlId="formLastName">
                       <Form.Label
                         style={{
@@ -279,7 +279,7 @@ const Patient = () => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
+                  <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
                     <Form.Group controlId="formEmail">
                       <Form.Label
                         style={{
@@ -303,7 +303,7 @@ const Patient = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
+                  <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
                     <Form.Group controlId="formMobilePhone">
                       <Form.Label
                         style={{
@@ -331,7 +331,7 @@ const Patient = () => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
+                  <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
                     <Form.Group controlId="formProfileType">
                       <Form.Label
                         style={{
@@ -356,7 +356,7 @@ const Patient = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
+                  <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
                     <Form.Group controlId="formAssigned">
                       <Form.Label
                         style={{
