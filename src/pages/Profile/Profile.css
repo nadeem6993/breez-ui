@@ -6,8 +6,9 @@
 .profileMain {
   background-color: rgb(238, 244, 245);
   min-height: 100vh;
-  padding: 30px 200px 20px 100px;
+  padding: 30px 180px 20px 100px;
 }
+
 .patientMain {
   background-color: rgb(238, 244, 245);
 }
@@ -20,8 +21,9 @@
 }
 
 .addBtn {
-  width: 70%;
+  width: 80%;
 }
+
 @media screen and (max-width: 768px) {
   .profileMain {
     background-color: rgb(238, 244, 245);
@@ -34,6 +36,7 @@
   }
   .addBtn {
     width: 80%;
+    margin-left: 100px;
     margin-bottom: 20px;
   }
 }
@@ -50,5 +53,6 @@
   .addBtn {
     width: 97%;
     margin-bottom: 20px;
+    margin-right: 20px;
   }
 }

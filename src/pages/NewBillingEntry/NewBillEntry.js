@@ -1,13 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import "./NewBillingEntry.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
-import {
-  faDatabase,
-  faUser,
-  faChartPie,
-} from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
 import PatientInfoForm from "./PatientInfoForm";
 import StatusForm from "./StatusForm";
@@ -60,7 +53,7 @@ const NewBillEntry = () => {
                     </Col>
                   </Row>
                 </Col>
-                <Col lg="5" md="12" className="statusForm">
+                <Col lg="5" md="12">
                   <StatusForm register={register} errors={errors} />
                   <Row
                     className="mt-2"

@@ -11,23 +11,32 @@ import InsuranceCompany from "./InsuranceCompany";
 
 const NoSelection = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "100px 0px",
-      }}
-    >
-      <FontAwesomeIcon
-        icon={faSearch}
-        size="8x"
-        style={{ color: "grey", opacity: "0.3" }}
-      />
-      <p style={{ textAlign: "center", margin: "20px" }}>
-        Got to start somewhere! <br /> Select profile type and search above.
-      </p>
-    </div>
+    <>
+      <div
+        style={{
+          height: "50px",
+          backgroundColor: "lightgrey",
+          borderRadius: "0px 10px 0px 0px",
+        }}
+      ></div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "100px 0px",
+        }}
+      >
+        <FontAwesomeIcon
+          icon={faSearch}
+          size="8x"
+          style={{ color: "grey", opacity: "0.3" }}
+        />
+        <p style={{ textAlign: "center", margin: "20px" }}>
+          Got to start somewhere! <br /> Select profile type and search above.
+        </p>
+      </div>
+    </>
   );
 };
 
@@ -90,6 +99,8 @@ const Profile = () => {
                             style={{
                               height: "45px",
                               borderRadius: "10px",
+                              fontSize: "small",
+                              border: "none",
                             }}
                           >
                             <option value="none">Select Profile Type</option>
@@ -103,19 +114,27 @@ const Profile = () => {
                           </Form.Control>
                         </Form.Group>
                       </Col>
-                      <Col lg="7">
+                      <Col lg="8">
                         <Form.Group controlId="formProfileType">
                           <Form.Control
                             name="searchBar"
                             placeholder="Search.."
                             type="text"
-                            style={{ height: "45px", borderRadius: "10px" }}
+                            style={{
+                              height: "45px",
+                              border: "none",
+                              borderRadius: "10px",
+                              fontSize: "small",
+                            }}
                           />
                         </Form.Group>
                       </Col>
                     </Form>
                   </Col>
-                  <Col lg="5">
+                  <Col
+                    lg="5"
+                    style={{ display: "flex", justifyContent: "flex-end" }}
+                  >
                     <Button
                       size="lg"
                       variant="none"
@@ -136,7 +155,7 @@ const Profile = () => {
                 </Row>
               </Col>
             </Row>
-            <Row>
+            <Row style={{ marginTop: "20px" }}>
               <Col lg="12">
                 <div
                   style={{

@@ -9,18 +9,16 @@ const PatientInfoForm = ({ register, errors, disable }) => {
           marginTop: "20px",
           marginBottom: "20px",
           color: "#445978",
-          fontWeight: "600",
         }}
       >
         Patient Information
       </h5>
       <Row>
-        <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
+        <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formFirstName">
             <Form.Label
               style={{
                 fontSize: "12px",
-                fontWeight: "500",
                 color: "#445978",
               }}
             >
@@ -33,11 +31,16 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               required
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
-        <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
+        <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formLastName">
             <Form.Label
               style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
@@ -51,17 +54,20 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               name="lastName"
               type="text"
               ref={register}
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
       </Row>
       <Row>
-        <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
+        <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formEmail">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Email Address
             </Form.Label>
             <Form.Control
@@ -69,15 +75,18 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               name="email"
               type="email"
               ref={register}
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
-        <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
+        <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formMobilePhone">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Mobile Phone
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -87,7 +96,12 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               name="mobilePhone"
               type="name"
               ref={register}
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
@@ -97,18 +111,15 @@ const PatientInfoForm = ({ register, errors, disable }) => {
         style={{
           marginTop: "43px",
           marginBottom: "20px",
-          fontWeight: "600",
           color: "#445978",
         }}
       >
         Provider Information
       </h5>
       <Row>
-        <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
+        <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formPracticeName">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Practice Name
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -121,7 +132,12 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               ref={register}
               placeholder="Start typing the practice name..."
               defaultValue=""
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             >
               <option value="none">Practice name....</option>
               <option value="">Pro Smile Dental Care</option>
@@ -130,11 +146,9 @@ const PatientInfoForm = ({ register, errors, disable }) => {
             </Form.Control>
           </Form.Group>
         </Col>
-        <Col lg="6" md="6" style={{ marginLeft: "-10px" }}>
+        <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formProviders">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Provider(s)
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -145,7 +159,12 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               as="select"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             >
               <option value="none">Select your provider(s)</option>
               <option value="">Dr. Daria Rahman</option>
@@ -159,18 +178,15 @@ const PatientInfoForm = ({ register, errors, disable }) => {
         style={{
           marginTop: "43px",
           marginBottom: "20px",
-          fontWeight: "600",
           color: "#445978",
         }}
       >
         Insurance + Fees
       </h5>
       <Row>
-        <Col lg="4" md="4" style={{ marginRight: "-10px" }}>
+        <Col lg="4" md="4" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formDateOfService">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Date of Service
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -181,15 +197,18 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="Date"
               ref={register}
               defaultValue=""
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             ></Form.Control>
           </Form.Group>
         </Col>
-        <Col lg="8" md="8" style={{ marginLeft: "-10px" }}>
+        <Col lg="8" md="8" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formInsuranceCompany">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Insurance Company
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -201,7 +220,12 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               ref={register}
               as="select"
               placeholder="Start typing the insurance..."
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             >
               <option value="none">Insurance....</option>
               <option value="">Blue Shield of California</option>
@@ -212,11 +236,9 @@ const PatientInfoForm = ({ register, errors, disable }) => {
         </Col>
       </Row>
       <Row>
-        <Col lg="3" md="3" style={{ marginRight: "-10px" }}>
+        <Col lg="3" md="3" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formDOSServiceFees">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               DOS Service Fees
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -226,15 +248,18 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               name="DOSServiceFee"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             ></Form.Control>
           </Form.Group>
         </Col>
-        <Col lg="3" md="3" style={{ marginLeft: "-10px" }}>
+        <Col lg="3" md="3" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formPriorBalance">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Prior Balance
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -245,16 +270,19 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
         <Col lg="3" md="3"></Col>
         <Col lg="3" md="3">
           <Form.Group controlId="form31-60DayAR">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               31-60 Day A/R
             </Form.Label>
             <Form.Control
@@ -263,17 +291,20 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
       </Row>
       <Row>
-        <Col lg="3" md="3" style={{ marginRight: "-10px" }}>
+        <Col lg="3" md="3" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formCoPayAmt">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Co-Pay Amt
             </Form.Label>
             <Form.Control
@@ -282,15 +313,18 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             ></Form.Control>
           </Form.Group>
         </Col>
-        <Col lg="3" md="3" style={{ marginLeft: "-10px" }}>
+        <Col lg="3" md="3" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formCollected">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Collected
             </Form.Label>
             <Form.Control
@@ -299,16 +333,19 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
         <Col lg="3" md="3"></Col>
         <Col lg="3" md="3">
           <Form.Group controlId="form60-90DayAR">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               60-90 Day A/R
             </Form.Label>
             <Form.Control
@@ -317,17 +354,20 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
       </Row>
       <Row>
-        <Col lg="3" md="3" style={{ marginRight: "-10px" }}>
+        <Col lg="3" md="3" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formCurrentAR">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Current A/R
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -338,15 +378,18 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             ></Form.Control>
           </Form.Group>
         </Col>
-        <Col lg="3" md="3" style={{ marginLeft: "-10px" }}>
+        <Col lg="3" md="3" style={{ padding: "0px 10px" }}>
           <Form.Group controlId="formPatientBalance">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Patient Balance
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -357,16 +400,19 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
         <Col lg="3" md="3"></Col>
         <Col lg="3" md="3">
           <Form.Group controlId="form90PlusDayAR">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               90+ Day A/R
             </Form.Label>
             <Form.Control
@@ -375,7 +421,12 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               type="text"
               ref={register}
               defaultValue="$"
-              style={{ height: "43px", borderRadius: "10px" }}
+              style={{
+                height: "43px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>

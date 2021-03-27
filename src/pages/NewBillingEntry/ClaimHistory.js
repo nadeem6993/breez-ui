@@ -70,7 +70,24 @@ const ClaimHistory = () => {
                 padding: "0px",
               }}
             ></div>
-            <h3 className="text-white pt-5 ml-5 mt-5">#REF A000001</h3>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <h3 className="text-white pt-5 ml-5 mt-5">REF #A000001</h3>
+              <Button
+                variant="transparent"
+                style={{
+                  border: "2px solid #3b9ad7",
+                  borderRadius: "10px",
+                  height: "43px",
+                  color: "white",
+                  fontSize: "small",
+                  marginTop: "87px",
+                  marginRight: "200px",
+                  padding: "0px 20px",
+                }}
+              >
+                Print Summary
+              </Button>
+            </div>
           </Col>
         </Row>
         <Row className="newBillForms">
@@ -83,10 +100,10 @@ const ClaimHistory = () => {
                       <Table hover style={{ fontSize: "small" }}>
                         <thead style={{ backgroundColor: "lightgrey" }}>
                           <tr>
-                            <th>Date</th>
-                            <th>Specialist</th>
-                            <th>Status/Action</th>
-                            <th>Notes</th>
+                            <td>Date</td>
+                            <td>Specialist</td>
+                            <td>Status/Action</td>
+                            <td>Notes</td>
                           </tr>
                         </thead>
                         <tbody>
@@ -150,9 +167,174 @@ const ClaimHistory = () => {
                   </Row>
                 </Col>
                 <Col lg="5" md="12" className="statusForm">
-                  <StatusForm register={register} errors={errors} />
-                  <Row className="mt-2">
-                    <Col style={{ padding: "0px 50px" }}>
+                  <div
+                    style={{
+                      padding: "10px 80px 20px 40px",
+                    }}
+                  >
+                    <h5
+                      style={{
+                        marginTop: "20px",
+                        marginBottom: "20px",
+                        color: "#445978",
+                      }}
+                    >
+                      Status
+                    </h5>
+                    <Row>
+                      <Col>
+                        <Form.Group controlId="formClaimStatus">
+                          <Form.Label
+                            style={{ fontSize: "12px", color: "#445978" }}
+                          >
+                            Claim Status
+                            <p style={{ color: "red", display: "inline" }}>*</p>
+                          </Form.Label>
+                          <Form.Control
+                            ref={register}
+                            name="claimStatus"
+                            type="text"
+                            as="select"
+                            required
+                            style={{
+                              height: "45px",
+                              borderRadius: "10px",
+                              fontSize: "small",
+                              color: "#445978",
+                            }}
+                          >
+                            <option value="none">Claim your status</option>
+                            <option value="paid">Paid</option>
+                            <option value="resubmitted">Resubmitted</option>
+                            <option value="outstanding">Outstanding</option>
+                          </Form.Control>
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <Form.Group controlId="formStatusNotes">
+                          <Form.Label
+                            style={{ fontSize: "12px", color: "#445978" }}
+                          >
+                            Notes
+                            <p style={{ color: "red", display: "inline" }}>*</p>
+                          </Form.Label>
+                          <Form.Control
+                            ref={register}
+                            as="textarea"
+                            rows={8}
+                            name="statusNotes"
+                            required
+                            style={{
+                              borderRadius: "10px",
+                              fontSize: "small",
+                              color: "#445978",
+                            }}
+                          />
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                    <Row className="mt-2">
+                      <Col style={{ padding: "0px 15px" }}>
+                        <Button
+                          block
+                          size="lg"
+                          className="mt-4"
+                          variant="primary"
+                          type="submit"
+                          style={{
+                            fontSize: "small",
+                            height: "43px",
+                            backgroundColor: "#3b9ad7",
+                            borderRadius: "10px",
+                          }}
+                        >
+                          Update Status
+                        </Button>
+                      </Col>
+                    </Row>
+                    <h5
+                      style={{
+                        marginTop: "43px",
+                        marginBottom: "20px",
+                        color: "#445978",
+                      }}
+                    >
+                      Follow-Up Actions
+                    </h5>
+                    <Row>
+                      <Col>
+                        <Form.Group controlId="patientFollowupAction">
+                          <Form.Label
+                            style={{
+                              fontSize: "12px",
+                              fontWeight: "500",
+                              color: "#445978",
+                            }}
+                          >
+                            Patient Follow-Up Action
+                            <p style={{ color: "red", display: "inline" }}>*</p>
+                          </Form.Label>
+                          <Form.Control
+                            ref={register}
+                            name="patientFollowupAction"
+                            type="text"
+                            as="select"
+                            placeholder="Choose Follow-Up"
+                            required
+                            style={{
+                              height: "45px",
+                              borderRadius: "10px",
+                              fontSize: "small",
+                              color: "#445978",
+                            }}
+                          >
+                            <option value="none">Choose Follow-Up</option>
+                            <option value="email">Email</option>
+                            <option value="phoneCall">Phone Call</option>
+                            <option value="statement">Statement</option>
+                            <option value="collectionLetter">
+                              Collection - Letter
+                            </option>
+                            <option value="collectionTransfer">
+                              Collection - Transfer
+                            </option>
+                          </Form.Control>
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <Form.Group controlId="formFollowupNotes">
+                          <Form.Label
+                            style={{
+                              fontSize: "12px",
+                              fontWeight: "500",
+                              color: "#445978",
+                            }}
+                          >
+                            Notes
+                            <p style={{ color: "red", display: "inline" }}>*</p>
+                          </Form.Label>
+                          <Form.Control
+                            ref={register}
+                            name="followupNotes"
+                            as="textarea"
+                            rows={8}
+                            required
+                            style={{
+                              borderRadius: "10px",
+                              fontSize: "small",
+                              color: "#445978",
+                            }}
+                          />
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                  </div>
+                  <Row className="mt-2 mr-4">
+                    <Col style={{ padding: "0px 55px" }}>
                       <Button
                         block
                         size="lg"
@@ -161,7 +343,6 @@ const ClaimHistory = () => {
                         type="submit"
                         style={{
                           fontSize: "small",
-                          fontWeight: "500",
                           height: "43px",
                           backgroundColor: "#3b9ad7",
                           borderRadius: "10px",

@@ -191,17 +191,14 @@ const Patient = () => {
   return (
     <div className="patientMain">
       <div className="patientTable">
-        <Table
-          hover
-          style={{ fontSize: "small", fontWeight: "500", color: "#445978" }}
-        >
+        <Table hover style={{ fontSize: "small", color: "#445978" }}>
           <thead style={{ backgroundColor: "lightgrey" }}>
             <tr>
-              <th>Profile ID</th>
-              <th>Name</th>
-              <th>Email Address</th>
-              <th>Mobile Phone</th>
-              <th>Assigned</th>
+              <td>Profile ID</td>
+              <td>Name</td>
+              <td>Email Address</td>
+              <td>Mobile Phone</td>
+              <td>Assigned</td>
             </tr>
           </thead>
           <tbody>
@@ -225,7 +222,7 @@ const Patient = () => {
             {patientDetail && (
               <Form>
                 <h5
-                  style={{ color: "#445978", fontWeight: "600" }}
+                  style={{ color: "#445978" }}
                 >{`Profile ID #${patientDetail.id}`}</h5>
                 <Row>
                   <Col lg="6" md="6" style={{ marginRight: "-10px" }}>
@@ -245,7 +242,12 @@ const Patient = () => {
                         type="text"
                         value={patientDetail.firstName}
                         required
-                        style={{ height: "45px", borderRadius: "10px" }}
+                        style={{
+                          height: "45px",
+                          borderRadius: "10px",
+                          fontSize: "small",
+                          color: "#445978",
+                        }}
                       />
                     </Form.Group>
                   </Col>
@@ -266,7 +268,12 @@ const Patient = () => {
                         value={patientDetail.lastName}
                         name="lastName"
                         type="text"
-                        style={{ height: "45px", borderRadius: "10px" }}
+                        style={{
+                          height: "45px",
+                          borderRadius: "10px",
+                          fontSize: "small",
+                          color: "#445978",
+                        }}
                       />
                     </Form.Group>
                   </Col>
@@ -287,7 +294,12 @@ const Patient = () => {
                         value={patientDetail.email}
                         name="email"
                         type="email"
-                        style={{ height: "45px", borderRadius: "10px" }}
+                        style={{
+                          height: "45px",
+                          borderRadius: "10px",
+                          fontSize: "small",
+                          color: "#445978",
+                        }}
                       />
                     </Form.Group>
                   </Col>
@@ -308,7 +320,12 @@ const Patient = () => {
                         value={patientDetail.mobilePhone}
                         name="mobilePhone"
                         type="text"
-                        style={{ height: "45px", borderRadius: "10px" }}
+                        style={{
+                          height: "45px",
+                          borderRadius: "10px",
+                          fontSize: "small",
+                          color: "#445978",
+                        }}
                       />
                     </Form.Group>
                   </Col>
@@ -330,7 +347,12 @@ const Patient = () => {
                         value="Patient"
                         name="profileType"
                         type="text"
-                        style={{ height: "45px", borderRadius: "10px" }}
+                        style={{
+                          height: "45px",
+                          borderRadius: "10px",
+                          fontSize: "small",
+                          color: "#445978",
+                        }}
                       />
                     </Form.Group>
                   </Col>
@@ -350,7 +372,12 @@ const Patient = () => {
                         value={patientDetail.assigned}
                         name="assigned"
                         type="text"
-                        style={{ height: "45px", borderRadius: "10px" }}
+                        style={{
+                          height: "45px",
+                          borderRadius: "10px",
+                          fontSize: "small",
+                          color: "#445978",
+                        }}
                       />
                     </Form.Group>
                   </Col>

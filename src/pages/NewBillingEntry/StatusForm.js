@@ -12,7 +12,6 @@ const StatusForm = ({ register, errors }) => {
         style={{
           marginTop: "20px",
           marginBottom: "20px",
-          fontWeight: "600",
           color: "#445978",
         }}
       >
@@ -21,9 +20,7 @@ const StatusForm = ({ register, errors }) => {
       <Row>
         <Col>
           <Form.Group controlId="formClaimStatus">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Claim Status
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
@@ -33,7 +30,12 @@ const StatusForm = ({ register, errors }) => {
               type="text"
               as="select"
               required
-              style={{ height: "45px", borderRadius: "8px" }}
+              style={{
+                height: "45px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             >
               <option value="none">Claim your status</option>
               <option value="paid">Paid</option>
@@ -46,19 +48,21 @@ const StatusForm = ({ register, errors }) => {
       <Row>
         <Col>
           <Form.Group controlId="formStatusNotes">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Notes
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
             <Form.Control
               ref={register}
               as="textarea"
-              rows={6}
+              rows={8}
               name="statusNotes"
               required
-              style={{ borderRadius: "8px" }}
+              style={{
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
@@ -67,7 +71,6 @@ const StatusForm = ({ register, errors }) => {
         style={{
           marginTop: "43px",
           marginBottom: "20px",
-          fontWeight: "600",
           color: "#445978",
         }}
       >
@@ -89,7 +92,12 @@ const StatusForm = ({ register, errors }) => {
               as="select"
               placeholder="Choose Follow-Up"
               required
-              style={{ height: "45px", borderRadius: "8px" }}
+              style={{
+                height: "45px",
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             >
               <option value="none">Choose Follow-Up</option>
               <option value="email">Email</option>
@@ -104,19 +112,30 @@ const StatusForm = ({ register, errors }) => {
       <Row>
         <Col>
           <Form.Group controlId="formFollowupNotes">
-            <Form.Label
-              style={{ fontSize: "12px", fontWeight: "500", color: "#445978" }}
-            >
+            <Form.Label style={{ fontSize: "12px", color: "#445978" }}>
               Notes
               <p style={{ color: "red", display: "inline" }}>*</p>
+              <p
+                style={{
+                  color: "#445978",
+                  display: "inline",
+                  marginLeft: "270px",
+                }}
+              >
+                0/350
+              </p>
             </Form.Label>
             <Form.Control
               ref={register}
               name="followupNotes"
               as="textarea"
-              rows={6}
+              rows={8}
               required
-              style={{ borderRadius: "8px" }}
+              style={{
+                borderRadius: "10px",
+                fontSize: "small",
+                color: "#445978",
+              }}
             />
           </Form.Group>
         </Col>
