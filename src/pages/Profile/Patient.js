@@ -449,6 +449,7 @@ const Patient = () => {
                 <h5
                   style={{
                     color: "#445978",
+                    paddingBottom: "10px",
                   }}
                 >
                   Billing history
@@ -459,8 +460,6 @@ const Patient = () => {
                   style={{
                     fontSize: "small",
                     color: "#445978",
-                    padding: "0px",
-                    overflowY: "auto",
                   }}
                 >
                   <thead>
@@ -472,10 +471,10 @@ const Patient = () => {
                   </thead>
                   <div
                     style={{
-                      border: "1px solid white",
+                      border: "1px solid lightgrey",
                       borderRadius: "10px",
                       backgroundColor: "white",
-                      height: "235px",
+                      height: "225px",
                       overflowY: "scroll",
                     }}
                   >
