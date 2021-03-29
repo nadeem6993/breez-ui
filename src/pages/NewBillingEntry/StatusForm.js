@@ -37,7 +37,7 @@ const StatusForm = ({ register, errors }) => {
                 color: "#445978",
               }}
             >
-              <option value="none">Claim your status</option>
+              <option value="none">Choose status</option>
               <option value="paid">Paid</option>
               <option value="resubmitted">Resubmitted</option>
               <option value="outstanding">Outstanding</option>

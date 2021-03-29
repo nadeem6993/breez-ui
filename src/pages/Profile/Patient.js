@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Row, Col, Table, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {} from "@fortawesome/free-solid-svg-icons";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 const Patient = () => {
   const data = [
@@ -191,14 +191,14 @@ const Patient = () => {
   return (
     <div className="patientMain">
       <div className="patientTable">
-        <Table hover style={{ fontSize: "small", color: "#445978" }}>
+        <Table hover responsive style={{ fontSize: "small", color: "#445978" }}>
           <thead style={{ backgroundColor: "lightgrey" }}>
             <tr>
               <td>Profile ID</td>
               <td>Name</td>
               <td>Email Address</td>
-              <td>Mobile Phone</td>
-              <td>Assigned</td>
+              <td style={{ paddingRight: "200px" }}>Mobile Phone</td>
+              <td style={{ paddingRight: "50px" }}>Assigned</td>
             </tr>
           </thead>
           <tbody>
@@ -208,8 +208,10 @@ const Patient = () => {
                   <td>{patient.id}</td>
                   <td>{`${patient.firstName} ${patient.lastName}`}</td>
                   <td>{patient.email}</td>
-                  <td>{patient.mobilePhone}</td>
-                  <td>{patient.assigned}</td>
+                  <td style={{ paddingRight: "200px" }}>
+                    {patient.mobilePhone}
+                  </td>
+                  <td style={{ paddingRight: "50px" }}>{patient.assigned}</td>
                 </tr>
               );
             })}
@@ -218,11 +220,11 @@ const Patient = () => {
       </div>
       <div>
         <Row style={{ paddingTop: "50px" }}>
-          <Col lg="8">
+          <Col lg="8" style={{ paddingRight: "60px" }}>
             {patientDetail && (
               <Form>
                 <h5
-                  style={{ color: "#445978" }}
+                  style={{ color: "#445978", paddingBottom: "20px" }}
                 >{`Profile ID #${patientDetail.id}`}</h5>
                 <Row>
                   <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
@@ -230,7 +232,6 @@ const Patient = () => {
                       <Form.Label
                         style={{
                           fontSize: "small",
-                          fontWeight: "500",
                           color: "#445978",
                         }}
                       >
@@ -256,7 +257,6 @@ const Patient = () => {
                       <Form.Label
                         style={{
                           fontSize: "12px",
-                          fontWeight: "500",
                           color: "#445978",
                         }}
                       >
@@ -284,7 +284,6 @@ const Patient = () => {
                       <Form.Label
                         style={{
                           fontSize: "12px",
-                          fontWeight: "500",
                           color: "#445978",
                         }}
                       >
@@ -308,7 +307,6 @@ const Patient = () => {
                       <Form.Label
                         style={{
                           fontSize: "12px",
-                          fontWeight: "500",
                           color: "#445978",
                         }}
                       >
@@ -332,11 +330,13 @@ const Patient = () => {
                 </Row>
                 <Row>
                   <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
-                    <Form.Group controlId="formProfileType">
+                    <Form.Group
+                      controlId="formProfileType"
+                      style={{ position: "relative" }}
+                    >
                       <Form.Label
                         style={{
                           fontSize: "12px",
-                          fontWeight: "500",
                           color: "#445978",
                         }}
                       >
@@ -354,14 +354,26 @@ const Patient = () => {
                           color: "#445978",
                         }}
                       />
+                      <FontAwesomeIcon
+                        icon={faLock}
+                        size="2x"
+                        style={{
+                          color: "#445978",
+                          position: "absolute",
+                          left: "280px",
+                          bottom: "9px",
+                        }}
+                      />
                     </Form.Group>
                   </Col>
                   <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
-                    <Form.Group controlId="formAssigned">
+                    <Form.Group
+                      controlId="formAssigned"
+                      style={{ position: "relative" }}
+                    >
                       <Form.Label
                         style={{
                           fontSize: "12px",
-                          fontWeight: "500",
                           color: "#445978",
                         }}
                       >
@@ -379,6 +391,16 @@ const Patient = () => {
                           color: "#445978",
                         }}
                       />
+                      <FontAwesomeIcon
+                        icon={faLock}
+                        size="2x"
+                        style={{
+                          color: "#445978",
+                          position: "absolute",
+                          left: "280px",
+                          bottom: "9px",
+                        }}
+                      />
                     </Form.Group>
                   </Col>
                 </Row>
@@ -390,7 +412,6 @@ const Patient = () => {
                       variant="none"
                       style={{
                         fontSize: "small",
-                        fontWeight: "500",
                         color: "white",
                         height: "45px",
                         width: "100%",
@@ -409,7 +430,6 @@ const Patient = () => {
                       type="submit"
                       style={{
                         fontSize: "small",
-                        fontWeight: "500",
                         width: "100%",
                         height: "45px",
                         border: "2px solid #ed1e32",
@@ -423,16 +443,16 @@ const Patient = () => {
               </Form>
             )}
           </Col>
-          <Col lg="4">
+          <Col lg="4" style={{ paddingLeft: "30px" }}>
             {patientDetail && (
               <div>
-                <h4
+                <h5
                   style={{
                     color: "#445978",
                   }}
                 >
                   Billing history
-                </h4>
+                </h5>
                 <Table
                   hover
                   borderless
@@ -440,52 +460,60 @@ const Patient = () => {
                     fontSize: "small",
                     color: "#445978",
                     padding: "0px",
-                    height: "250px",
                     overflowY: "auto",
                   }}
                 >
                   <thead>
-                    <tr>
+                    <tr style={{ display: "flex" }}>
                       <td>REF#</td>
-                      <td>status</td>
-                      <td>Balance</td>
+                      <td style={{ paddingLeft: "40px" }}>status</td>
+                      <td style={{ paddingLeft: "53px" }}>Balance</td>
                     </tr>
                   </thead>
-                  <tbody
+                  <div
                     style={{
                       border: "1px solid white",
                       borderRadius: "10px",
                       backgroundColor: "white",
+                      height: "235px",
+                      overflowY: "scroll",
                     }}
                   >
-                    <tr>
-                      <td>A000001</td>
-                      <td>Resubmitted</td>
-                      <td>$322.20</td>
-                    </tr>
-                    <tr>
-                      <td>A000002</td>
-                      <td>Paid</td>
-                      <td>$478.12</td>
-                    </tr>
-                    <tr>
-                      <td>A000003</td>
-                      <td>Outstanding</td>
-                      <td>$4,023.55</td>
-                    </tr>
-                    <tr>
-                      <td>A000004</td>
-                      <td>Paid</td>
-                      <td>$89.20</td>
-                    </tr>
-                    <tr>
-                      <td>A000005</td>
-                      <td>Resubmitted</td>
-                      <td>$321.20</td>
-                    </tr>
-                  </tbody>
+                    <tbody>
+                      <tr>
+                        <td>A000001</td>
+                        <td>Resubmitted</td>
+                        <td>$322.20</td>
+                      </tr>
+                      <tr>
+                        <td>A000002</td>
+                        <td>Paid</td>
+                        <td>$478.12</td>
+                      </tr>
+                      <tr>
+                        <td>A000003</td>
+                        <td>Outstanding</td>
+                        <td>$4,023.55</td>
+                      </tr>
+                      <tr>
+                        <td>A000004</td>
+                        <td>Paid</td>
+                        <td>$89.20</td>
+                      </tr>
+                      <tr>
+                        <td>A000005</td>
+                        <td>Resubmitted</td>
+                        <td>$321.20</td>
+                      </tr>
+                      <tr>
+                        <td>A000005</td>
+                        <td>Resubmitted</td>
+                        <td>$321.20</td>
+                      </tr>
+                    </tbody>
+                  </div>
                 </Table>
-                <Row style={{ padding: "20px 0px" }}>
+                <Row style={{ padding: "0px 0px" }}>
                   <Col>
                     <Button
                       size="lg"
@@ -497,7 +525,6 @@ const Patient = () => {
                         height: "43px",
                         width: "100%",
                         fontSize: "small",
-                        fontWeight: "500",
                         borderRadius: "10px",
                       }}
                     >
@@ -516,7 +543,6 @@ const Patient = () => {
                         height: "43px",
                         width: "100%",
                         fontSize: "small",
-                        fontWeight: "500",
                       }}
                     >
                       Save

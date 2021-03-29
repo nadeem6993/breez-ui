@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button, Form, Table } from "react-bootstrap";
-import "./NewBillingEntry.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import {
-  faDatabase,
-  faUser,
-  faChartPie,
-} from "@fortawesome/free-solid-svg-icons";
+  Container,
+  Row,
+  Col,
+  Button,
+  Form,
+  Table,
+  Image,
+} from "react-bootstrap";
+import "./NewBillingEntry.css";
+import avatar from "../../assets/Profile.png";
 import { useForm } from "react-hook-form";
 import PatientInfoForm from "./PatientInfoForm";
 import StatusForm from "./StatusForm";
@@ -179,7 +181,10 @@ const ClaimHistory = () => {
                         color: "#445978",
                       }}
                     >
-                      Status
+                      Status:{" "}
+                      <p style={{ color: "#85c765", display: "inline" }}>
+                        Paid
+                      </p>
                     </h5>
                     <Row>
                       <Col>
@@ -203,7 +208,7 @@ const ClaimHistory = () => {
                               color: "#445978",
                             }}
                           >
-                            <option value="none">Claim your status</option>
+                            <option value="none">Choose status</option>
                             <option value="paid">Paid</option>
                             <option value="resubmitted">Resubmitted</option>
                             <option value="outstanding">Outstanding</option>

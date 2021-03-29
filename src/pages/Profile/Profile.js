@@ -32,7 +32,7 @@ const NoSelection = () => {
           size="8x"
           style={{ color: "grey", opacity: "0.3" }}
         />
-        <p style={{ textAlign: "center", margin: "20px" }}>
+        <p style={{ textAlign: "center", margin: "20px", color: "#445978" }}>
           Got to start somewhere! <br /> Select profile type and search above.
         </p>
       </div>
@@ -97,6 +97,7 @@ const Profile = () => {
                             as="select"
                             onChange={handleChange}
                             style={{
+                              color: "#445978",
                               height: "45px",
                               borderRadius: "10px",
                               fontSize: "small",
@@ -115,16 +116,29 @@ const Profile = () => {
                         </Form.Group>
                       </Col>
                       <Col lg="8">
-                        <Form.Group controlId="formProfileType">
+                        <Form.Group
+                          controlId="formProfileType"
+                          style={{ position: "relative" }}
+                        >
                           <Form.Control
                             name="searchBar"
-                            placeholder="Search.."
+                            placeholder="Search"
                             type="text"
                             style={{
                               height: "45px",
                               border: "none",
                               borderRadius: "10px",
                               fontSize: "small",
+                            }}
+                          />
+                          <FontAwesomeIcon
+                            icon={faSearch}
+                            size="1x"
+                            style={{
+                              color: "grey",
+                              position: "absolute",
+                              left: "350px",
+                              bottom: "14px",
                             }}
                           />
                         </Form.Group>
@@ -143,7 +157,6 @@ const Profile = () => {
                       style={{
                         backgroundColor: "#3b9ad7",
                         fontSize: "small",
-                        fontWeight: "500",
                         color: "white",
                         height: "45px",
                         borderRadius: "10px",
