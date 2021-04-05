@@ -20,6 +20,18 @@
   overflow-y: auto;
 }
 
+.patientTable::-webkit-scrollbar {
+  width: 20px;
+}
+.patientTable::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.patientTable::-webkit-scrollbar-thumb {
+  background-color: #445978;
+  border-radius: 10px;
+}
+
 .addBtn {
   width: 80%;
 }

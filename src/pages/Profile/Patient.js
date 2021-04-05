@@ -12,33 +12,6 @@ const Patient = () => {
       email: "dan.avina@boltdental.com",
       mobilePhone: "415-577-4654",
       assigned: "Mary Arredondo",
-      billingHistory: [
-        {
-          REF: "A000001",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-        {
-          REF: "A000002",
-          status: "Paid",
-          balance: "$478.12",
-        },
-        {
-          REF: "A000003",
-          status: "Outstanding",
-          balance: "$4,023.55",
-        },
-        {
-          REF: "A000004",
-          status: "Paid",
-          balance: "$89.93",
-        },
-        {
-          REF: "A000005",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-      ],
     },
     {
       id: "P323193",
@@ -47,33 +20,6 @@ const Patient = () => {
       email: "Suranne@gmail.com",
       mobilePhone: "415-577-4654",
       assigned: "Mary Arredondo",
-      billingHistory: [
-        {
-          REF: "A000001",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-        {
-          REF: "A000002",
-          status: "Paid",
-          balance: "$478.12",
-        },
-        {
-          REF: "A000003",
-          status: "Outstanding",
-          balance: "$4,023.55",
-        },
-        {
-          REF: "A000004",
-          status: "Paid",
-          balance: "$89.93",
-        },
-        {
-          REF: "A000005",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-      ],
     },
     {
       id: "P323194",
@@ -82,33 +28,6 @@ const Patient = () => {
       email: "Zahara@gmail.com",
       mobilePhone: "415-577-4654",
       assigned: "Kenya Milton",
-      billingHistory: [
-        {
-          REF: "A000001",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-        {
-          REF: "A000002",
-          status: "Paid",
-          balance: "$478.12",
-        },
-        {
-          REF: "A000003",
-          status: "Outstanding",
-          balance: "$4,023.55",
-        },
-        {
-          REF: "A000004",
-          status: "Paid",
-          balance: "$89.93",
-        },
-        {
-          REF: "A000005",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-      ],
     },
     {
       id: "P323195",
@@ -117,33 +36,6 @@ const Patient = () => {
       email: "Ammar@gmail.com",
       mobilePhone: "415-577-4654",
       assigned: "Mary Arredondo",
-      billingHistory: [
-        {
-          ref: "A000001",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-        {
-          REF: "A000002",
-          status: "Paid",
-          balance: "$478.12",
-        },
-        {
-          REF: "A000003",
-          status: "Outstanding",
-          balance: "$4,023.55",
-        },
-        {
-          REF: "A000004",
-          status: "Paid",
-          balance: "$89.93",
-        },
-        {
-          REF: "A000005",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-      ],
     },
     {
       id: "P323196",
@@ -152,33 +44,14 @@ const Patient = () => {
       email: "fredrickdonald@gmail.com",
       mobilePhone: "415-577-4654",
       assigned: "Kenya Milton",
-      billingHistory: [
-        {
-          REF: "A000001",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-        {
-          REF: "A000002",
-          status: "Paid",
-          balance: "$478.12",
-        },
-        {
-          REF: "A000003",
-          status: "Outstanding",
-          balance: "$4,023.55",
-        },
-        {
-          REF: "A000004",
-          status: "Paid",
-          balance: "$89.93",
-        },
-        {
-          REF: "A000005",
-          status: "Resubmitted",
-          balance: "$322.20",
-        },
-      ],
+    },
+    {
+      id: "P323195",
+      firstName: "Ammaar",
+      lastName: "Talley",
+      email: "Ammar@gmail.com",
+      mobilePhone: "415-577-4654",
+      assigned: "Mary Arredondo",
     },
   ];
 
@@ -191,7 +64,7 @@ const Patient = () => {
   return (
     <div className="patientMain">
       <div className="patientTable">
-        <Table hover responsive style={{ fontSize: "small", color: "#445978" }}>
+        <Table hover responsive style={{ fontSize: "12px", color: "#445978" }}>
           <thead style={{ backgroundColor: "lightgrey" }}>
             <tr>
               <td>Profile ID</td>
@@ -470,6 +343,7 @@ const Patient = () => {
                     </tr>
                   </thead>
                   <div
+                    className="patientTable"
                     style={{
                       border: "1px solid lightgrey",
                       borderRadius: "10px",

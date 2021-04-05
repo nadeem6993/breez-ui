@@ -96,63 +96,93 @@ const ClaimHistory = () => {
           <Col lg="12">
             <Form>
               <Row>
-                <Col lg="7" md="12">
+                <Col lg="8" md="12">
+                  <h5
+                    style={{
+                      marginTop: "30px",
+                      marginBottom: "40px",
+                      color: "#445978",
+                    }}
+                  >
+                    Claim History
+                  </h5>
                   <Row>
                     <Col>
-                      <Table responsive hover style={{ fontSize: "small" }}>
-                        <thead style={{ backgroundColor: "lightgrey" }}>
-                          <tr>
-                            <td>Date</td>
-                            <td>Specialist</td>
-                            <td>Status/Action</td>
-                            <td>Notes</td>
-                          </tr>
-                        </thead>
-                        <tbody style={{ backgroundColor: "white" }}>
-                          {tableData.map((data) => {
-                            return (
-                              <tr style={{ fontSize: "12px" }}>
-                                <td>{data.date}</td>
-                                <td>{data.specialist}</td>
-                                <td>{data.status}</td>
-                                <td>
-                                  <div style={{ display: "flex" }}>
-                                    <div
-                                      style={{
-                                        overflow: "hidden",
-                                        display: "inline",
-                                        height: "20px",
-                                        textOverflow: "ellipsis",
-                                      }}
-                                    >
-                                      {data.notes}
+                      <div className="tableHistory">
+                        <Table
+                          responsive
+                          hover
+                          style={{
+                            fontSize: "12px",
+                            fontWeight: "lighter",
+                            color: "#445978",
+                          }}
+                        >
+                          <thead
+                            style={{
+                              backgroundColor: "lightgrey",
+                              paddingLeft: "10px",
+                            }}
+                          >
+                            <tr>
+                              <td style={{ paddingLeft: "30px" }}>Date</td>
+                              <td>Specialist</td>
+                              <td>Status/Action</td>
+                              <td>Notes</td>
+                            </tr>
+                          </thead>
+                          <tbody
+                            style={{
+                              backgroundColor: "white",
+                            }}
+                          >
+                            {tableData.map((data) => {
+                              return (
+                                <tr style={{ fontSize: "12px" }}>
+                                  <td style={{ paddingLeft: "30px" }}>
+                                    {data.date}
+                                  </td>
+                                  <td>{data.specialist}</td>
+                                  <td>{data.status}</td>
+                                  <td>
+                                    <div style={{ display: "flex" }}>
+                                      <div
+                                        style={{
+                                          overflow: "hidden",
+                                          display: "inline",
+                                          height: "20px",
+                                          textOverflow: "ellipsis",
+                                        }}
+                                      >
+                                        {data.notes}
+                                      </div>
+                                      {open === true ? (
+                                        <FontAwesomeIcon
+                                          icon={faAngleDown}
+                                          size="2x"
+                                          style={{
+                                            display: "inline",
+                                          }}
+                                          onClick={handleIcon}
+                                        />
+                                      ) : (
+                                        <FontAwesomeIcon
+                                          icon={faAngleUp}
+                                          size="2x"
+                                          style={{
+                                            display: "inline",
+                                          }}
+                                          onClick={handleIcon}
+                                        />
+                                      )}
                                     </div>
-                                    {open === true ? (
-                                      <FontAwesomeIcon
-                                        icon={faAngleDown}
-                                        size="2x"
-                                        style={{
-                                          display: "inline",
-                                        }}
-                                        onClick={handleIcon}
-                                      />
-                                    ) : (
-                                      <FontAwesomeIcon
-                                        icon={faAngleUp}
-                                        size="2x"
-                                        style={{
-                                          display: "inline",
-                                        }}
-                                        onClick={handleIcon}
-                                      />
-                                    )}
-                                  </div>
-                                </td>
-                              </tr>
-                            );
-                          })}
-                        </tbody>
-                      </Table>
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </Table>
+                      </div>
                     </Col>
                   </Row>
                   <PatientInfoForm
@@ -200,10 +230,11 @@ const ClaimHistory = () => {
                     </Button>
                   </Row>
                 </Col>
-                <Col lg="5" md="12" className="statusForm">
+                <Col lg="4" md="12">
                   <div
                     style={{
-                      padding: "10px 80px 20px 40px",
+                      marginRight: "20px",
+                      padding: "10px 20px 20px 40px",
                     }}
                   >
                     <h5
