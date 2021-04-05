@@ -18,6 +18,94 @@
   padding: 5px 80px 20px 50px;
 }
 
+.select-search {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.select-search *,
+.select-search *::after,
+.select-search *::before {
+  box-sizing: inherit;
+  color: #445978;
+  border-radius: 10px;
+}
+
+.select-search__input {
+  display: block;
+  margin-bottom: 10px;
+  height: 45px;
+  width: 100%;
+  padding: 0 16px;
+  background: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  outline: none;
+  font-size: small;
+  text-overflow: ellipsis;
+  -webkit-appearance: none;
+}
+
+.select-search__value {
+  position: relative;
+}
+
+.select-search__value::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 9px);
+  right: 19px;
+  width: 11px;
+  height: 11px;
+}
+
+.select-search__select {
+  background: #fff;
+  box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
+}
+
+.select-search__options {
+  list-style: none;
+}
+.select-search__row:not(:first-child) {
+  border-top: 1px solid #eee;
+}
+
+.select-search__input:not([readonly]):focus {
+  cursor: initial;
+}
+
+.select-search__option,
+.select-search__not-found {
+  display: block;
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  background: #fff;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.select-search__option.is-selected {
+  background: #445978;
+  color: #fff;
+}
+.select-search__option.is-highlighted,
+.select-search__option:not(.is-selected):hover {
+  background: rgba(47, 204, 139, 0.1);
+}
+
+.select-search__option.is-highlighted.is-selected,
+.select-search__option.is-selected:hover {
+  background: rgb(236, 240, 243);
+  color: #fff;
+}
+
 @media screen and (min-width: 768px) {
   .newBillForms {
     background-color: rgb(236, 240, 243);

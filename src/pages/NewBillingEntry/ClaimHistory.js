@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Form,
-  Table,
-  Image,
-} from "react-bootstrap";
+import { Container, Row, Col, Button, Form, Table } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import "./NewBillingEntry.css";
 import avatar from "../../assets/Profile.png";
 import { useForm } from "react-hook-form";
@@ -56,8 +50,14 @@ const ClaimHistory = () => {
   const [disable, setDisable] = useState(true);
   const { register, errors, handleSubmit } = useForm();
 
+  const [open, setOpen] = useState(false);
+
   const handleDisable = () => {
     setDisable(!disable);
+  };
+
+  const handleIcon = () => {
+    setOpen(!open);
   };
 
   return (
@@ -99,7 +99,7 @@ const ClaimHistory = () => {
                 <Col lg="7" md="12">
                   <Row>
                     <Col>
-                      <Table hover style={{ fontSize: "small" }}>
+                      <Table responsive hover style={{ fontSize: "small" }}>
                         <thead style={{ backgroundColor: "lightgrey" }}>
                           <tr>
                             <td>Date</td>
@@ -108,14 +108,46 @@ const ClaimHistory = () => {
                             <td>Notes</td>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody style={{ backgroundColor: "white" }}>
                           {tableData.map((data) => {
                             return (
-                              <tr>
+                              <tr style={{ fontSize: "12px" }}>
                                 <td>{data.date}</td>
                                 <td>{data.specialist}</td>
                                 <td>{data.status}</td>
-                                <td>{data.notes}</td>
+                                <td>
+                                  <div style={{ display: "flex" }}>
+                                    <div
+                                      style={{
+                                        overflow: "hidden",
+                                        display: "inline",
+                                        height: "20px",
+                                        textOverflow: "ellipsis",
+                                      }}
+                                    >
+                                      {data.notes}
+                                    </div>
+                                    {open === true ? (
+                                      <FontAwesomeIcon
+                                        icon={faAngleDown}
+                                        size="2x"
+                                        style={{
+                                          display: "inline",
+                                        }}
+                                        onClick={handleIcon}
+                                      />
+                                    ) : (
+                                      <FontAwesomeIcon
+                                        icon={faAngleUp}
+                                        size="2x"
+                                        style={{
+                                          display: "inline",
+                                        }}
+                                        onClick={handleIcon}
+                                      />
+                                    )}
+                                  </div>
+                                </td>
                               </tr>
                             );
                           })}

@@ -1,7 +1,16 @@
 import React from "react";
 import { Col, Form, Row, Button } from "react-bootstrap";
+import SelectSearch, { fuzzySearch } from "react-select-search";
 
 const StatusForm = ({ register, errors }) => {
+  const followUpData = [
+    { name: "Email", value: "email" },
+    { name: "Phone Call", value: "phoneCall" },
+    { name: "Statement", value: "statement" },
+    { name: "Collection - Letter", value: "collectionLetter" },
+    { name: "Collection - Transfer", value: "collectionTransfer" },
+  ];
+
   return (
     <div
       style={{
@@ -85,27 +94,15 @@ const StatusForm = ({ register, errors }) => {
               Patient Follow-Up Action
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
-            <Form.Control
-              ref={register}
-              name="patientFollowupAction"
-              type="text"
-              as="select"
-              placeholder="Choose Follow-Up"
-              required
-              style={{
-                height: "45px",
-                borderRadius: "10px",
-                fontSize: "small",
-                color: "#445978",
-              }}
-            >
-              <option value="none">Choose Follow-Up</option>
-              <option value="email">Email</option>
-              <option value="phoneCall">Phone Call</option>
-              <option value="statement">Statement</option>
-              <option value="collectionLetter">Collection - Letter</option>
-              <option value="collectionTransfer">Collection - Transfer</option>
-            </Form.Control>
+            <SelectSearch
+              className="select-search"
+              options={followUpData}
+              value=""
+              search
+              filterOptions={fuzzySearch}
+              name="insurance"
+              placeholder="Start typing the insurance..."
+            />
           </Form.Group>
         </Col>
       </Row>

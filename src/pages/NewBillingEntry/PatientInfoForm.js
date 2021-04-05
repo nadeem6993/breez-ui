@@ -1,7 +1,26 @@
-import React from "react";
-import { Col, Form, Row, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Form, Row, Button, Dropdown } from "react-bootstrap";
+import SelectSearch, { fuzzySearch } from "react-select-search";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import avatar from "../../assets/Profile.png";
 
 const PatientInfoForm = ({ register, errors, disable }) => {
+  const practiceName = [
+    { name: "Pro Smile Dental Care", avatar: avatar, value: 1 },
+    { name: "Monalisa Smile Dental", avatar: avatar, value: 2 },
+    { name: "Family Smile Center", avatar: avatar, value: 3 },
+  ];
+  const providers = [
+    { name: "Dr. Daria Rahman", avatar: avatar, value: 1 },
+    { name: "Dr. Leroy McNamara", avatar: avatar, value: 2 },
+    { name: "Dr. Margie Fisher", avatar: avatar, value: 3 },
+  ];
+  const insurances = [
+    { name: "Blue Shield of California", avatar: avatar, value: 1 },
+    { name: "Delta Dental of California", avatar: avatar, value: 2 },
+    { name: "Royal Dental of California", avatar: avatar, value: 3 },
+  ];
   return (
     <div style={{ paddingBottom: "20px" }}>
       <h5
@@ -123,27 +142,15 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               Practice Name
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
-            <Form.Control
-              disabled={disable}
-              required
-              name="practiceName"
-              as="select"
-              type="text"
-              ref={register}
-              placeholder="Start typing the practice name..."
-              defaultValue=""
-              style={{
-                height: "43px",
-                borderRadius: "10px",
-                fontSize: "small",
-                color: "#445978",
-              }}
-            >
-              <option value="none">Practice name....</option>
-              <option value="">Pro Smile Dental Care</option>
-              <option value="">Mona Lisa Smile Dental</option>
-              <option value="">Family Smile Center</option>
-            </Form.Control>
+            <SelectSearch
+              className="select-search"
+              options={practiceName}
+              value=""
+              search
+              filterOptions={fuzzySearch}
+              name="practice"
+              placeholder="Choose your Practice"
+            />
           </Form.Group>
         </Col>
         <Col lg="6" md="6" style={{ padding: "0px 10px" }}>
@@ -152,25 +159,15 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               Provider(s)
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
-            <Form.Control
-              disabled={disable}
-              required
+            <SelectSearch
+              className="select-search"
+              options={providers}
+              value=""
+              search
+              filterOptions={fuzzySearch}
               name="providers"
-              type="text"
-              ref={register}
-              as="select"
-              style={{
-                height: "43px",
-                borderRadius: "10px",
-                fontSize: "small",
-                color: "#445978",
-              }}
-            >
-              <option value="none">Select your provider(s)</option>
-              <option value="">Dr. Daria Rahman</option>
-              <option value="">Dr. Leroy McNamara</option>
-              <option value="">Dr. Margie Fisher</option>
-            </Form.Control>
+              placeholder="Select your provider(s)"
+            />
           </Form.Group>
         </Col>
       </Row>
@@ -212,26 +209,15 @@ const PatientInfoForm = ({ register, errors, disable }) => {
               Insurance Company
               <p style={{ color: "red", display: "inline" }}>*</p>
             </Form.Label>
-            <Form.Control
-              disabled={disable}
-              required
-              name="insuranceCompany"
-              type="text"
-              ref={register}
-              as="select"
+            <SelectSearch
+              className="select-search"
+              options={insurances}
+              value=""
+              search
+              filterOptions={fuzzySearch}
+              name="insurance"
               placeholder="Start typing the insurance..."
-              style={{
-                height: "43px",
-                borderRadius: "10px",
-                fontSize: "small",
-                color: "#445978",
-              }}
-            >
-              <option value="none">Insurance....</option>
-              <option value="">Blue Shield of California</option>
-              <option value="">Delta Dental of California</option>
-              <option value="">Royal Provider of California</option>
-            </Form.Control>
+            />
           </Form.Group>
         </Col>
       </Row>

@@ -19,12 +19,7 @@ const NewBillEntry = () => {
                 padding: "0px",
               }}
             ></div>
-            <h2
-              className="text-white pt-5 ml-5 mt-5"
-              style={{ fontWeight: "500" }}
-            >
-              New Billing Entry
-            </h2>
+            <h2 className="text-white pt-5 ml-5 mt-5">New Billing Entry</h2>
           </Col>
         </Row>
         <Row className="newBillForms">
@@ -41,7 +36,6 @@ const NewBillEntry = () => {
                         variant="none"
                         style={{
                           fontSize: "small",
-                          fontWeight: "500",
                           color: "white",
                           backgroundColor: "orangered",
                           height: "43px",
@@ -69,7 +63,6 @@ const NewBillEntry = () => {
                         style={{
                           backgroundColor: "white",
                           fontSize: "small",
-                          fontWeight: "500",
                           width: "100%",
                           height: "43px",
                           color: "#3b9ad7",
